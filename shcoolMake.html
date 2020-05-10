@@ -34,7 +34,7 @@
         br{
             line-height: 0rem;
         }
-        .start-make{
+        #start-make{
             width: 1rem;
             background: skyblue;
             color: #FFF;
@@ -86,7 +86,7 @@
 <body>
     <p class="music-play">
         <audio class="play-btn" autoplay id="music1" hidden>
-            <source src="audio/birth.mp3" type="audio/mpeg">
+            <source src="audio/school.mp3" type="audio/mpeg">
         </audio>
         <img class="music-line" src="img/all/line.png" alt="">
     </p>
@@ -147,7 +147,7 @@
         <span>联系人：</span><input class="touch1" type="text" value="X先生"><br>
         <span>邮箱：</span><input class="email1" type="text" value="xxxxxxxxxx@xx.com"><br>
         <span>手机号：</span><input class="phone1" type="text" value="1xxxxxxxxxx"><br>
-        <p class="start-make">开始制作</p>
+        <p id="start-make">开始制作</p>
     </div>
     <div class="making">
         <p>制作中。。。。。。</p>
@@ -218,7 +218,7 @@
         $(this).next('img').attr('src',src);
         $(this).next('img').css('display',"block");
     })
-$(".start-make").click(function(){
+$("#start-make").click(function(){
     //一页
     $(".one-head").html($(".one-head1").val())
     //二页

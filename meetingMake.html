@@ -253,7 +253,7 @@
         br{
             line-height: 0rem;
         }
-        .start-make{
+        #start-make{
             width: 1rem;
             background: skyblue;
             color: #FFF;
@@ -305,7 +305,7 @@
 <body>
     <p class="music-play">
         <audio class="play-btn" autoplay id="music1" hidden>
-            <source src="audio/birth.mp3" type="audio/mpeg">
+            <source src="audio/meeting.mp3" type="audio/mpeg">
         </audio>
         <img class="music-line" src="img/all/line.png" alt="">
     </p>
@@ -364,7 +364,7 @@
         <span>活动地址：</span><input class="five-address1" type="text" value="XX市XX街XX酒店"><br>
         <span>活动时间：</span><input class="five-time1" type="text" value="2020年X月X日"><br>
         
-        <p class="start-make">开始制作</p>
+        <p id="start-make">开始制作</p>
     </div>
     <div class="making">
         <p>制作中。。。。。。</p>
@@ -445,7 +445,7 @@
         $(this).next('img').attr('src',src);
         $(this).next('img').css('display',"block");
     })
-    $(".start-make").click(function(){
+    $("#start-make").click(function(){
         //一页
         $(".one-intro1").html($(".one-intro11").val())
         $(".one-intro2").html($(".one-intro21").val())

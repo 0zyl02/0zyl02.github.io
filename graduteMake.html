@@ -243,7 +243,7 @@
             left: 2.7rem;
             animation: show2 2.5s linear;
         }
-        .start-make{
+        #start-make{
             width: 1rem;
             background: skyblue;
             color: #FFF;
@@ -295,7 +295,7 @@
 <body>
     <p class="music-play">
         <audio class="play-btn" autoplay id="music1" hidden>
-            <source src="audio/birth.mp3" type="audio/mpeg">
+            <source src="audio/gradute.mp3" type="audio/mpeg">
         </audio>
         <img class="music-line" src="img/all/line.png" alt="">
     </p>
@@ -359,7 +359,7 @@
         <span>活动时间：</span><input class="time1" type="text" value="X年X月X日"><br>
         <span>活动地点：</span><input class="address1" type="text" value="学校大礼堂"><br>
         
-        <p class="start-make">开始制作</p>
+        <p id="start-make">开始制作</p>
     </div>
     <div class="making">
         <p>制作中。。。。。。</p>
@@ -427,7 +427,7 @@
         $(this).next('img').attr('src',src);
         $(this).next('img').css('display',"block");
     })
-$(".start-make").click(function(){
+$("#start-make").click(function(){
     //一页
     $(".one-title").html($(".one-title1").val())
     $(".one-title1").html($(".one-title11").val())

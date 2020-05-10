@@ -31,7 +31,7 @@
         br{
             line-height: 0rem;
         }
-        .start-make{
+        #start-make{
             width: 1rem;
             background: skyblue;
             color: #FFF;
@@ -83,7 +83,7 @@
 <body>
     <p class="music-play">
         <audio class="play-btn" autoplay id="music1" hidden>
-            <source src="audio/birth.mp3" type="audio/mpeg">
+            <source src="audio/wedding.mp3" type="audio/mpeg">
         </audio>
         <img class="music-line" src="img/all/line.png" alt="">
     </p>
@@ -145,7 +145,7 @@
         <span>英文：</span><input class="wedding-invite-eng1" type="text" value="sincerely invite"><br>
         <span>活动内容：</span><input class="invite-content1" type="text" value="在最好的年华 相遇，在最美的时光里 相爱，沉浸在幸福中的我们将于2020年5月2日（星期几）几时举办婚礼，诚邀您和您的家人出席见证我们的幸福时刻，诚挚邀请您与我们一起分享神的祝福和爱的喜悦！"><br>
         <span>活动地点：</span><input class="invite-address1" type="text" value="地点：某市某街某某号某某酒店"><br>        
-        <p class="start-make">开始制作</p>
+        <p id="start-make">开始制作</p>
     </div>
     <div class="making">
         <p>制作中。。。。。。</p>
@@ -215,7 +215,7 @@
         $(this).next('img').css('display',"block");
         // $(this).parent().find('img').attr('src',src);
     })
-    $(".start-make").click(function(){
+    $("#start-make").click(function(){
         //一页
         $(".wedding-title").html($(".wedding-title1").val())
         $(".wedding-person").html($(".one-person1").val())
