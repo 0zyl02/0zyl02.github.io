@@ -1,0 +1,318 @@
+body{
+    /* background: url(../img/birth/birthbg.jpg) center;
+    background-size:3.8rem ; */
+    /* height: 3rem;*/
+    overflow: hidden; 
+}
+.birth-box{
+    background: url(../img/birth/bg.png) center;
+    background-size:4.5rem ;
+    position: relative;
+    height: 5.9rem;
+    /* width: 3.75rem; */
+    touch-action: none
+}
+#boxOne{
+    padding-top: 1rem;
+}
+#boxTwo,#boxFour{
+    padding-top: 1rem;
+}
+#boxFive,#boxThree{
+    padding-top: .7rem;
+}
+.birth-title{
+    font-size: .3rem;
+}
+.birth-intro{
+    font-size: .26rem;
+}
+.animate{
+    text-align: center;
+    color: #FF6F00;
+    opacity: 0;
+    transform: translate(-300px, 0) scale(0);
+    animation: sideSlide 2s forwards;
+    font-size: .28rem;
+}
+.animate span {
+    color: #FF6F00;
+    opacity: 0;
+    transform: translate(-300px, 0) scale(0);
+    animation: sideSlide 2s forwards;
+    font-size: .28rem;
+}
+@keyframes sideSlide {
+    60% {
+        transform: translate(20px, 0) scale(1);
+        color: orangered;
+    }
+    80% {
+        transform: translate(20px, 0) scale(1);
+        color: orangered;
+    }
+    99% {
+        transform: translate(0) scale(1.2);
+        color: #E25800;
+    }
+    100% {
+        transform: translate(0) scale(1);
+        opacity: 1;
+        color: orangered;
+    }
+}
+.animate span:nth-of-type(2) {
+    animation-delay: .2s;
+}
+.animate span:nth-of-type(3) {
+    animation-delay: .3s;
+}
+.animate span:nth-of-type(4) {
+    animation-delay: .4s;
+}
+.animate span:nth-of-type(5) {
+    animation-delay: .5s;
+}
+.animate span:nth-of-type(6) {
+    animation-delay: .6s;
+}
+.animate span:nth-of-type(7) {
+    animation-delay: .7s;
+}
+.animate span:nth-of-type(8) {
+    animation-delay: .8s;
+}
+.animate span:nth-of-type(9) {
+    animation-delay: .9s;
+}
+#boxOne img{
+    width: 3rem;
+    display: block;
+    margin: 0 auto;
+    border-radius: 20%;
+}
+.birth-date{
+    font-size: .24rem;
+    text-align: center;
+    color: #FF6F00;
+    margin-bottom: .2rem;
+}
+#boxTwo img{
+    width: 2.5rem;
+    position: absolute;
+    top: 1rem;
+    /* opacity: 0; */
+}
+#boxTwo li{
+    width: 2.5rem;
+    margin: 0 auto;
+    position: relative;
+    opacity: 0;
+}
+#boxTwo p{
+    font-size: .25rem;
+    text-align: center;
+}
+.birth-item1 img{
+    transform: rotate(30deg);
+    animation: img1 2s  linear;
+}
+.birth-item2 img{
+    transform: rotate(45deg);
+    animation: img1 2s 2s linear;
+
+}
+.birth-item3 img{
+    transform: rotate(-30deg);
+    animation: img1 2s 4s linear;
+}
+@keyframes img1{
+    0%{
+        transform: scale(1) rotate(0deg) translate(0,0);
+        opacity: 0;
+    }
+    50%{
+        transform: scale(1.5) rotate(30deg) translate(.5rem,2rem);
+    }
+    100%{
+        transform: scale(1) rotate(0deg) translate(0,0);
+        opacity: 1;
+    }
+}
+
+.birth-box-three-content{
+    display: flex;
+    position: relative;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.birth-box-three-content p{
+    font-family: "YouYuan";
+    font-size: .2rem;
+    width: .8rem;
+    margin: -.2rem 0rem 0 .1rem;
+    background: lightyellow;
+    padding: .15rem;
+    color: pink;
+    border-radius: 10%;
+    animation: star1 2s linear;
+}
+.birth-box-three-content img{
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 20%;
+}
+#boxThree .birth-star{
+    width: .5rem;
+    position: absolute;
+}
+.birth-star1{
+    top: 1rem;
+    left: 3rem;
+    animation: star1 2s linear infinite alternate;
+}
+@keyframes star1{
+    from{
+        transform: rotateY(360deg);
+    }
+    to{
+        transform: rotateY(0);
+    }
+}
+.birth-star2{
+    top: 1.1rem;
+    left: -.05rem;
+    transform: rotate(45deg);
+}
+@keyframes star2{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+.birth-star3{
+    top: 50%;
+    left: 34%;
+    transform: translate(-50%,-50%);
+    animation: star2 1s linear infinite alternate;
+}
+.invite-title{
+    font-size: .35rem;
+    text-align: center;
+    margin-top: .3rem;
+}
+.invite-content,.invite-call{
+    font-size: .25rem;
+    color: black;
+    padding:0 .2rem .2rem;
+    line-height: .3rem;
+    animation: move 2s ;
+    font-family: "YouYuan";
+    text-indent: .4rem;
+}
+.invite-call{
+    text-indent: 0;
+    padding: 0 .2rem 0;
+    margin: .3rem 0;
+}
+@keyframes move{
+    0%{
+        transform: translateX(-4rem);
+    }
+    25%{
+        transform: translateX(0rem);
+    }
+    50%{
+        transform: translateY(-.2rem);
+    }
+    75%{
+        transform: translateY(0.2rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.invite-name{
+    font-family: "YouYuan";
+    font-size: .25rem;
+    margin: .1rem 0.2rem .1rem 0;
+    float: right;
+    animation: move1 1s linear;
+    width: 1.4rem;
+    text-align: center;
+}
+@keyframes move1{
+    from{
+        transform: translateX(4rem);
+    }
+    to{
+        transform: translateX((0));
+    }
+}
+#boxFive img{
+    width: 3rem;
+    height: 3rem;
+    display: block;
+    margin: 0 auto .2rem;
+    animation: show 1s linear;
+}
+@keyframes show{
+    from{
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+#boxFive p{
+    font-size: .25rem;
+    text-align: center;
+    padding: 0 .1rem;
+    animation: move1 1s linear;
+}
+#boxFive p:nth-child(2){
+    margin-bottom: .2rem;
+    animation: move1 2s linear;
+}
+.birth-touch{
+    display: flex;
+    width: 3.7rem;
+    margin: 0 auto;
+}
+.birth-touch a{
+    display: inline-block;
+    font-size: .2rem;
+    padding: .1rem .2rem;
+    text-align: center;
+    animation: show 1.5s linear;
+}
+.touch-mom{
+    background: pink;
+    color: #FFF;
+    margin: 0.5rem .3rem 0 .5rem;
+}
+.touch-dad{
+    background: lightblue;
+    color: #FFF;
+    margin-top: .5rem;
+}
+#boxSix{
+    margin-top: .8rem;
+}
+#boxSix p{
+    font-size: .3rem;
+    color: purple;
+    text-align: center;
+}
+#boxSix form{
+    font-size: .2rem;
+}
+#boxSix input{
+    font-size: .2rem;
+}

@@ -1,0 +1,284 @@
+body{
+    background: rgb(246,246,246);
+    overflow: hidden;
+}
+.school-box{
+    position: relative;
+    height: 6.35rem;
+    border: .16rem solid rgb(238,193,125);
+    background: rgb(52,51,52);
+    font-size: .2rem;
+    color: silver;
+    overflow: hidden;
+    touch-action: none
+}
+.box-one-content p{
+    font-size: .25rem;
+    color: #FFF;
+    text-align: center;
+}
+.one-head{
+    margin: .6rem 0 .3rem;
+}
+.one-title{
+    width: 1rem;
+    margin: 0 auto;
+}
+.one-title span{
+    font-size: .6rem;
+}
+.one-title span:nth-child(1){
+    color: orange;
+}
+.one-title span:nth-child(2){
+    color:orangered;
+}
+.one-title span:nth-child(3){
+    color: orchid;
+}
+.one-title span:nth-child(4){
+    color: orangered;
+}
+.one-title span:nth-child(5){
+    color: orange;
+}
+.box-one-content img{
+    position: absolute;
+}
+.box-one-content img:nth-last-child(1){
+    top: 1.5rem;
+    left: 2.5rem;
+    animation: show 1s;
+}
+.box-one-content img:nth-last-child(2){
+    width: .8rem;
+    top: 1rem;
+    left: 0.3rem;
+    animation: show1 2s linear;
+}
+@keyframes show1{
+    from{
+        left: -3rem;
+        top: -3rem;
+    }
+    to{
+        top: 1rem;
+        left: 0.3rem;
+    }
+}
+.box-one-content img:nth-last-child(3){
+    width: 1rem;
+    top: 4rem;
+    left: 0.3rem;
+    transform: rotate(30deg);
+    animation: show2 3s linear;
+}
+@keyframes show2{
+    from{
+        left: -3rem;
+        top: 8rem;
+    }
+    to{
+        top: 4rem;
+        left: 0.3rem;
+    }
+}
+.box-one-content img:nth-last-child(4){
+    width: .5rem;
+    top: 2.7rem;
+    left: 1.2rem;
+    transform: rotate(-30deg);
+    animation: show3 5s linear infinite alternate;
+}
+@keyframes show3{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.box-one-content img:nth-last-child(5){
+    top: 5rem;
+    left: 2.5rem;
+    animation: scale 1.5s infinite alternate;
+}
+@keyframes scale{
+    from{
+        transform: scale(1) rotate(-30deg);
+    }
+    to{
+        transform: scale(1.5) rotate(30deg);
+    }
+}
+.two-title{
+    font-size: .3rem;
+    text-align: center;
+    margin: .3rem 0 .2rem;
+
+}
+#boxTwo img{
+    width: 3rem;
+    height: 1.5rem;
+    display: block;
+    margin: 0 auto;
+    /* opacity: 0; */
+    animation: showImg1 2s linear;
+}
+@keyframes showImg1{
+    from{
+        transform: translateX(3rem);
+    }
+    to{
+        transform: translateX(0rem);
+    }
+}
+#boxTwo img:nth-child(2){
+    animation: showImg1 3s linear ;
+}
+#boxTwo img:nth-child(3){
+    animation: showImg2 2.5s linear;
+}
+@keyframes showImg2{
+    from{
+        transform: translateX(-3rem);
+    }
+    to{
+        transform: translateX(0rem);
+    }
+}
+#boxTwo img:nth-child(3){
+    margin: .2rem auto;
+}
+#boxThree img{
+    width: 3rem;
+    height: 1.5rem;
+    display: block;
+    margin: 0 auto;
+    /* opacity: 0; */
+    animation: showImg3 2s linear;
+}
+#boxThree img:nth-child(3){
+    margin: .2rem auto;
+    animation: showImg4 1s linear;
+}
+@keyframes showImg3{
+    from{
+        transform: translate(3rem,3rem) rotate(0deg);
+    }
+    to{
+        transform: translate(0rem,0rem) rotate(360deg);
+    }
+}
+#boxThree img:nth-child(2){
+    animation: showImg3 3s linear;
+}
+@keyframes showImg4{
+    from{
+        transform: translate(-3rem,-3rem) rotate(0deg);
+    }
+    to{
+        transform: translate(0rem,0rem) rotate(360deg);
+    }
+}
+.four-title{
+    font-size: .3rem;
+    color: seashell;
+    text-align: center;
+    margin: .5rem 0 .3rem;
+}
+.four-content-start,.four-content-end,.four-content{
+    font-size: .2rem;
+    margin: 0 .12rem;
+    line-height: .35rem;
+    animation: show 1.5s linear;
+}
+@keyframes show{
+    from{
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.four-content-end{
+    text-align: right;
+}
+.four-content{
+    text-indent: .4rem;
+    margin: .3rem 0.1rem;
+}
+.four-thank{
+    font-size: .4rem;
+    color: orangered;
+    text-align: center;
+    animation: show 3s linear  infinite;
+    margin-top: .2rem;
+}
+#boxFive p,#boxFive span{
+    font-size: .2rem;
+    text-align: center;
+    margin-top: .2rem;
+}
+#boxFive img{
+    width: 3.2rem;
+    height: 2.8rem;
+    margin: .2rem auto 0;
+    display: block;
+}
+#boxFive a{
+    width: 1.2rem;
+    font-size: .2rem;
+    color: #FFFFFF;
+    background: skyblue;
+    padding: .1rem .3rem;
+    margin: 0.3rem auto 0;
+    display: block;
+    text-align: center;
+}
+#boxFive p:nth-child(1){
+    animation: show 1s linear;
+}
+#boxFive p:nth-child(3){
+    animation: show 1s linear;
+}
+#boxFive p:nth-child(4){
+    animation: show1 1.8s linear;
+}
+#boxFive p:nth-child(5){
+    animation: show 2s linear;
+}
+#boxFive p:nth-child(6){
+    animation: show1 1.5s linear;
+}
+#boxFive img{
+    animation: show2 2s linear;
+}
+@keyframes show{
+    from{
+        transform: translateX(4rem);
+    }
+    to{
+        transform: translateX(0rem);
+    }
+}
+@keyframes show1{
+    from{
+        transform: translateX(-4rem);
+    }
+    to{
+        transform: translateX(0rem);
+    }
+}
+@keyframes show2{
+    from{
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}

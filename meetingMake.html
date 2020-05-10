@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我们毕业了</title>
+    <link rel="stylesheet" href="css/all.css">
+    <style>
+        body{
+            overflow: auto;
+        }
+        .upload-box p,span,input{
+            font-size: .2rem;
+        }
+        .upload-box{
+            font-size: 35px;
+            padding: .7rem .2rem .3rem;
+        }
+        .upload-box img{
+            width: 1rem;
+            height: 1rem;
+            /* display: block; */
+        }
+        .upload-box p, span, input {
+            font-size: .2rem;
+        }
+        input{
+            width: 2.5rem;
+        }
+        br{
+            line-height: 0rem;
+        }
+        .meeting-box{
+            position: relative;
+            /* background-color: rgb(2,38,73); */
+            background: url(img/meeting/bg.png) center 0;
+            background-size: 4rem;
+            height: 6.67rem;
+            overflow: hidden;
+            display: none;
+        }
+         p{
+            font-size: .25rem;
+            color: #FFF;
+        }
+        .one-title,.one-title1{
+            font-size: .6rem;
+            width: .8rem;
+            margin: 0 auto;
+            position: relative;
+            padding-top: .5rem;
+            line-height: 1.4rem;
+            animation: shan 1.5s linear;
+        }
+        .one-title1{
+            color: rgba(255,255,255,0.3);
+            position: absolute;
+            top: .1rem;
+            left: .1rem;
+        }
+        .one-dec,.one-dec1{
+            position: absolute;
+            display: inline-block;
+            width: .3rem;
+            top: 1.8rem;
+            left: 0.2rem;
+            animation: shan 1s linear infinite alternate;
+        }
+        @keyframes shan{
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 0.9;
+            }
+        }
+        .one-dec1{
+            top: 3.2rem;
+            animation: shan 1.5s linear infinite alternate;
+        }
+        .one-intro1{
+            width: .3rem;
+            float: left;
+            margin: -2.5rem 0 0 .2rem;
+            animation: show 1s linear;
+        }
+        @keyframes show {
+            from{
+                transform: translateY(4rem);
+            }
+            to{
+                transform: translateY(0);
+            }
+        }
+        .one-intro2{
+            width: 1.8rem;
+            float: right;
+            margin-top: 1rem; 
+            animation: show1 1.5s linear;
+        }
+        @keyframes show1 {
+            from{
+                transform: translateX(4rem);
+            }
+            to{
+                transform: translateX(0);
+            }
+        }
+        .box-dec{
+            display: inline-block;
+            width: 1rem;
+            position: absolute;
+            top: .3rem;
+            left: .1rem;
+        }
+        .two-title{
+            font-size: .4rem;
+            text-align: center;
+            padding-top: .5rem;
+            animation: show1 1.5s linear;
+        }
+        .two-call{
+            font-size: .2rem;
+            margin: .5rem .2rem .1rem;
+            animation:show2  1s linear;
+        }
+        .two-content{
+            font-size: .2rem;
+            margin: 0rem .2rem 0;
+            text-indent: .4rem;
+            line-height: .3rem;
+            animation:show2  1.5s linear;
+        }
+        @keyframes show2 {
+            from{
+                opacity: 0;
+                transform: scale(2);
+            }
+            to{
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        .three-title,.four-title,.five-title{
+            font-size: .4rem;
+            margin-left: 1rem;
+            animation: show1 1s linear;
+            padding: .5rem 0 .3rem;
+        }
+        .three-img{
+            display: block;
+            width: 2.3rem;
+            height: 2.3rem;
+            margin: 0 auto;
+            animation: rotateShow 2s linear;
+        }
+        @keyframes rotateShow{
+            from{
+                opacity: 0;
+                transform: rotate(180deg) translateX(4rem);
+            }
+            to{
+                opacity: 1;
+                transform: rotate(0deg) translateX(0rem);
+            }
+        }
+        .three-content-name{
+            text-align: center;
+            margin:.3rem 0 .1rem ;
+            animation: show1 1s linear;
+            font-size: .2rem;
+        }
+        .three-content{
+            font-size: .2rem;
+            text-indent: .4rem;
+            margin: 0rem .2rem 0;
+            animation: show1 1s linear;
+        }
+        .content-left{
+            float: left;
+        }
+        .content-right{
+            float: right;
+            margin-left: .45rem;
+        }
+        .content-right p{
+            font-size: .2rem;
+            line-height: .5rem;
+        }
+        .time-line{
+            width: .05rem;
+            height: 3.5rem;
+            background: #000;
+            margin-top: .18rem;
+        }
+        .time-line p{
+            width: .1rem;
+            height: .1rem;
+            border-radius: 50%;
+            background: #FFF;
+            margin: 0rem 0 .4rem -0.025rem;
+        }
+        .four-content-box{
+            display: flex;
+            padding: 0 .25rem;
+        }
+        .time1{
+            animation: show1 1s linear ;
+        }
+        .time2{
+            animation: show1 1.5s linear ;
+        }
+        .time3{
+            animation: show1 2s linear ;
+        }
+        .time4{
+            animation: show1 2.5s linear ;
+        }
+        .time5{
+            animation: show1 3s linear ;
+        }
+        .time6{
+            animation: show1 3.5s linear ;
+        }
+        .time7{
+            animation: show1 4s linear;
+        }
+        .time8{
+            animation: show1 4.5s linear ;
+        }
+        .five-img{
+            display: block;
+            width: 2.5rem;
+            height: 2.5rem;
+            margin: 0 auto;
+            animation: show2 1s ;
+        }
+        #boxFive p:nth-child(3),#boxFive p:nth-child(5){
+            margin:.2rem 0 0.06rem .3rem;
+            animation: show2 1s linear;
+        }
+        .five-address,.five-time{
+            margin-left: .6rem;
+            width: 3rem;
+            animation: show1 1s linear;
+        }
+        .five-time{
+            animation: show1 1.5s linear;
+        }
+        input{
+            width: 2.5rem;
+        }
+        br{
+            line-height: 0rem;
+        }
+        .start-make{
+            width: 1rem;
+            background: skyblue;
+            color: #FFF;
+            border-radius: .2rem;
+            text-align: center;
+            margin: .2rem auto .5rem;
+            padding: .1rem .2rem;
+        }
+        .show-box{
+            font-size: .2rem;
+            position: relative;
+            z-index: 2;
+        }
+        .show-btn{
+            font-size: .2rem;
+            color: slateblue;
+        }
+        .show-box .show-img{
+            width: 2.2rem;
+            height: 3.5rem;
+            position: absolute;
+            top: -.5rem;
+            left: 1rem;
+            display: none;
+            z-index: 2;
+        }
+        .show-bg{
+            width: 4rem;
+            height: 12rem;
+            background: rgba(0,0,0,0.3);
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: none;
+            z-index: 1;
+        }
+        .making{
+            font-size: .3rem;
+            display: none;
+        }
+        .making p{
+            font-size: .5rem;
+            text-align: center;
+            color: blue;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <p class="music-play">
+        <audio class="play-btn" autoplay id="music1" hidden>
+            <source src="audio/birth.mp3" type="audio/mpeg">
+        </audio>
+        <img class="music-line" src="img/all/line.png" alt="">
+    </p>
+    <a class="home" href="index.html"></a>
+    <p class="arrow"></p>
+    <div class="upload-box">
+        <p>首页</p>
+        <div class="show-box">
+            <div class="show-bg"></div>
+            <p class="show-btn">查看</p>
+            <img class="show-img" src="img/meeting/1.png" alt="">
+        </div>
+        <span>介绍1：</span><input class="one-intro11" type="text" value="企业高峰论坛，梦想铸就辉煌"><br>
+        <span>介绍2：</span><input class="one-intro21" type="text" value="企业高峰论坛，梦想铸就辉煌"><br>
+        <span>图片logo：</span><input class="upload-input" type="file" value="">
+        <img class="box-dec1" src="img/meeting/star1.png" alt="">
+        <p>第二页</p>
+        <div class="show-box">
+            <p class="show-btn">查看</p>
+            <img class="show-img" src="img/meeting/2.png" alt="">
+        </div>
+        <span>标题：</span><input class="two-title1" type="text" value="【诚挚邀请】"><br>
+        <span>称呼：</span><input class="two-call1" type="text" value="尊敬的女士/先生"><br>
+        <span>内容：</span><input class="two-content1" type="text" value="xx电子股份有限公司将于20xx年1月8-10日在北京xx大酒店举办“20xxxx世纪公司年会”。我们诚挚邀请您出席本届年会。本次年会主题为“分享·融合·共赢”，旨在为光伏晶硅企业搭建平台，分享专家对产业、行业发展趋势以及国家产业政策趋势的分析与预测，推进政府与企业、企业与企业之间的对接，推动相关政策与商业智慧的融合，为增强中国光伏晶硅企业核心竞争力、开启产业辉煌贡献绵薄之力。"><br>
+        <p>第三页</p>
+        <div class="show-box">
+            <p class="show-btn">查看</p>
+            <img class="show-img" src="img/meeting/3.png" alt="">
+        </div>
+        <span>标题：</span><input class="three-title1" type="text" value="特邀嘉宾"><br>
+        <span>图片1：</span><input class="upload-input" type="file" value="">
+        <img class="three-img1" src="img/meeting/chara.png" alt="">
+        <span>介绍1：</span><input class="three-content-name1" type="text" value="总经理"><br>
+        <span>介绍2：</span><input class="three-content1" type="text" value="科学技术的进步将会给人们的生活带来巨大的影响，而人们要不断适应这种时代的变化，而不要坐等未来，失去自我发展的良好机会。"><br>
+        <p>第四页</p>
+        <div class="show-box">
+            <p class="show-btn">查看</p>
+            <img class="show-img" src="img/meeting/4.png" alt="">
+        </div>
+        <span>时间段1：</span><input class="time11" type="text" value="AM 08:00-09:00 -- 主持开场"><br>
+        <span>时间段2：</span><input class="time21" type="text" value="AM 09:00-10:00 -- 会议介绍"><br>
+        <span>时间段3：</span><input class="time31" type="text" value="AM 10:00-11:00 -- 嘉宾介绍"><br>
+        <span>时间段4：</span><input class="time41" type="text" value="AM 11:00-12:00 -- 主题讲解"><br>
+        <span>时间段5：</span><input class="time51" type="text" value="PM 12:00-13:00 -- 中场休息"><br>
+        <span>时间段6：</span><input class="time61" type="text" value="PM 13:00-14:00 -- 产品介绍"><br>
+        <span>时间段7：</span><input class="time71" type="text" value="PM 14:00-15:00 -- 会议总结"><br>
+        <span>时间段8：</span><input class="time81" type="text" value="PM 15:00-16:00 -- 会议结束"><br>
+        <p>第五页</p>
+        <div class="show-box">
+            <p class="show-btn">查看</p>
+            <img class="show-img" src="img/meeting/5.png" alt="">
+        </div>
+        <span>标题：</span><input class="five-title1" type="text" value="会议信息"><br>
+        <span>活动地址图片：</span><input class="upload-input" type="file" value="">
+        <img class="five-img1" src="img/all/map.jpg" alt=""><br>
+        <span>活动地址：</span><input class="five-address1" type="text" value="XX市XX街XX酒店"><br>
+        <span>活动时间：</span><input class="five-time1" type="text" value="2020年X月X日"><br>
+        
+        <p class="start-make">开始制作</p>
+    </div>
+    <div class="making">
+        <p>制作中。。。。。。</p>
+    </div>
+    <div class="meeting-box" id="boxOne">
+        <p class="one-title">
+            邀请函 
+            <span class="one-title1">邀请函</span>
+            <img class="one-dec" src="img/meeting/star.png" alt="">
+            <img class="one-dec1" src="img/meeting/star.png" alt="">
+        </p>
+        <p class="one-intro1">企业高峰论坛，梦想铸就辉煌</p>
+        <p class="one-intro2">企业高峰论坛，梦想铸就辉煌</p>
+        <img class="box-dec" src="img/meeting/star1.png" alt="">
+    </div>
+    <div class="meeting-box" id="boxTwo">
+        <p class="two-title">【诚挚邀请】</p>
+        <p class="two-call">尊敬的女士/先生</p>
+        <p class="two-content">xx电子股份有限公司将于20xx年1月8-10日在北京xx大酒店举办“20xxxx世纪公司年会”。我们诚挚邀请您出席本届年会。本次年会主题为“分享·融合·共赢”，旨在为光伏晶硅企业搭建平台，分享专家对产业、行业发展趋势以及国家产业政策趋势的分析与预测，推进政府与企业、企业与企业之间的对接，推动相关政策与商业智慧的融合，为增强中国光伏晶硅企业核心竞争力、开启产业辉煌贡献绵薄之力。</p>
+    </div>
+    <div class="meeting-box" id="boxThree">
+        <p class="three-title">特邀嘉宾</p>
+        <img class="three-img" src="img/meeting/chara.png" alt="">
+        <p class="three-content-name">总经理 XX</p>    
+        <p class="three-content">科学技术的进步将会给人们的生活带来巨大的影响，而人们要不断适应这种时代的变化，而不要坐等未来，失去自我发展的良好机会。</p>    
+    </div>
+    <div class="meeting-box" id="boxFour">
+        <p class="four-title">
+            会议流程
+        </p>
+        <div class="four-content-box">
+            <div class="time-line">
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+            </div>
+            <div class="content-right">
+                 <p class="time1">AM 08:00-09:00 -- 主持开场</p>
+                 <p class="time2">AM 09:00-10:00 -- 会议介绍</p>
+                 <p class="time3">AM 10:00-11:00 -- 嘉宾介绍</p>
+                 <p class="time4">AM 11:00-12:00 -- 主题讲解</p>
+                 <p class="time5">PM 12:00-13:00 -- 中场休息</p>
+                 <p class="time6">PM 13:00-14:00 -- 产品介绍</p>
+                 <p class="time7">PM 14:00-15:00 -- 会议总结</p>
+                 <p class="time8">PM 15:00-16:00 -- 会议结束</p>
+            </div>
+        </div>
+    </div>
+    <div class="meeting-box" id="boxFive">
+        <p class="five-title">会议信息</p>
+        <img class="five-img" src="img/all/map.jpg" alt="">
+        <p>活动地址:</p>
+        <p class="five-address">XX市XX街XX酒店</p>
+        <p>活动时间:</p>
+        <p class="five-time">2020年X月X日</p>
+    </div>
+</body>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/touch-0.2.14.min.js"></script>
+<script src="js/all.js"></script>
+<script>
+    //查看
+    $(".show-btn").click(function(){
+        $(".show-bg").show()
+        $(this).parents(".show-box").find('.show-img').show()
+    })
+    $(".show-bg").click(function(){
+        $(".show-img").hide()
+        $(".show-bg").hide()
+    })
+    $(".upload-input").change(function(){
+        let src = getObjectURL(this.files[0]);
+        $(this).next('img').attr('src',src);
+        $(this).next('img').css('display',"block");
+    })
+    $(".start-make").click(function(){
+        //一页
+        $(".one-intro1").html($(".one-intro11").val())
+        $(".one-intro2").html($(".one-intro21").val())
+        $(".box-dec").attr('src',$(".box-dec1").attr('src'))
+        //二页
+        $(".two-title").html($(".two-title1").val())
+        $(".two-call").html($(".two-call1").val())
+        $(".two-content").html($(".two-content1").val())
+        //三页
+        $(".three-title").html($(".three-title1").val())
+        $(".three-content-name").html($(".three-content-name1").val())
+        $(".three-content").html($(".three-content1").val())
+        $(".three-img").attr('src',$(".three-img1").attr('src'))
+        //四页
+        $(".time1").html($(".time11").val())
+        $(".time2").html($(".time21").val())
+        $(".time3").html($(".time31").val())
+        $(".time4").html($(".time41").val())
+        $(".time5").html($(".time51").val())
+        $(".time6").html($(".time61").val())
+        $(".time7").html($(".time71").val())
+        $(".time8").html($(".time81").val())
+        //五页
+        $(".five-title").html($(".five-title1").val())
+        $(".five-img").attr('src',$(".five-img1").attr('src'))
+        $(".five-address").html($(".five-address1").val())
+        $(".five-time").html($(".five-time1").val())
+        $(".upload-box").hide()
+        setTimeout(function(){
+            $(".making").show(200,function(){
+                $(".making").hide(2000,function(){
+                    $("#boxOne").slideDown(500)
+                    document.body.style.overflow = 'hidden'
+                })
+            })
+        })
+    })
+
+// 判断浏览器是否支持 createObjectURL api
+function getObjectURL(file) {  
+		 var url = null;   
+		 if (window.createObjectURL!=undefined) {  
+		  url = window.createObjectURL(file) ;  
+		 } else if (window.URL!=undefined) { // mozilla(firefox)  
+		  url = window.URL.createObjectURL(file) ;  
+		 } else if (window.webkitURL!=undefined) { // webkit or chrome  
+		  url = window.webkitURL.createObjectURL(file) ;  
+		 }  
+		 return url ;  
+}
+touchFive()
+    
+</script>
+</html>

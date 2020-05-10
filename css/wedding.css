@@ -1,0 +1,333 @@
+body{
+    overflow: hidden; 
+
+}
+.wedding-box{
+    overflow: hidden;
+    height: 6.67rem;
+    position: relative;
+}
+.boxOne-content{
+    width: 4rem;
+    border: 1px solid rgb(188,148,109);
+    padding: .5rem;
+    transform: rotate(80deg);
+    margin: 1.9rem 0 0 -.6rem;
+    position: relative;
+}
+.wedding-title{
+    font-size: .5rem;
+    color: rgb(90,27,34);
+    width: 1.5rem;
+    text-align: center;
+    border: 1px solid rgb(188,148,109);
+    border-radius: 50%;
+    padding: .3rem;
+    transform: rotate(-70deg);
+    background: rgb(254,246,239);
+}
+.boxOne-content img{
+    position: absolute;
+}
+.boxOne-content img:nth-child(2){
+    width: .3rem;
+    top: 1.8rem;
+    left: 0.5rem;
+    transform: rotate(-100deg);
+}
+.boxOne-content img:nth-child(3){
+    transform: rotate(-120deg);
+    width: .5rem;
+    top: 2.3rem;
+    left: .85rem;
+}
+.boxOne-content p:nth-child(4){
+    font-size: .2rem;
+    transform: rotate(-82deg);
+    position: absolute;
+    top: 1.4rem;
+    left: 1.8rem;
+    color: rgb(90,27,34);
+}
+.boxOne-content img:nth-child(5){
+    position: absolute;
+    animation: heart 1s linear infinite alternate;
+    top: .2rem;
+    left: 2rem;
+}
+@keyframes heart{
+    from{
+        transform: scale(1) rotate(70deg);
+    }
+    to{
+        transform: scale(1.2) rotate(70deg);
+    }
+}
+.wedding-preson{
+    font-size: .2rem;
+    color: purple;
+    position: absolute;
+    transform: rotate(-81deg);
+    top: 1.4rem;
+    left: 2.8rem;
+    z-index: 2;
+}
+.boxOne-content img:nth-child(7){
+    width: 2rem;
+    position: absolute;
+    top: .5rem;
+    left: 3.28rem;
+    animation: rotate 2s linear infinite alternate;
+}
+@keyframes rotate{
+    from{
+        transform: rotate(-60deg);
+    }
+    to{
+        transform: rotate(-110deg);
+    }
+}
+#boxSix{
+    text-align: center;
+    background: url(../img/wedding/bg.jpg) center;
+    background-size: 3.8rem;
+}
+.wedding-invite{
+    font-size: .3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 1.2rem;
+    animation: show 1s linear;
+}
+@keyframes show{
+    from{
+        transform: translateX(4rem);
+    }
+    to{
+        transform: translateX(0rem);
+    }
+}
+@keyframes show1{
+    from{
+        transform: translateX(-4rem);
+    }
+    to{
+        transform: translateX(0rem);
+    }
+}
+@keyframes show2{
+    from{
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.wedding-invite-eng{
+    font-size: .28rem;
+    font-family: "YouYuan";
+    margin: .2rem 0 .6rem;
+    animation: show1 1.8s linear;
+}
+.invite-content{
+    font-size: .2rem;
+    color: palevioletred;
+    line-height: .24rem;
+    width: 2.4rem;
+    margin: 0 auto;
+    text-indent: .3rem;
+    animation: show2 2s linear;
+}
+.invite-address{
+    font-size: .22rem;
+    margin-top: .5rem;
+    animation: show 1.5s linear;
+}
+.wedding-bride,.wedding-bridegroom{
+    font-size: .3rem;
+    color: grey;
+    text-align: center;
+    margin-top: .3rem;
+}
+.bride-person,.bridegroom-person{
+    width: 3rem;
+    display: block;
+    margin: .2rem auto;
+    animation: show 1.5s linear;
+}
+.bridegroom-person{
+    animation: show1 1.5s linear;
+
+}
+.bride-intro,.bridegroom-intro{
+    font-size: .25rem;
+    color: grey;
+    text-align: center;
+}
+#boxThree img:nth-child(4),#boxTwo img:nth-child(4){
+    width: .5rem;
+    position: absolute;
+    top: .2rem;
+    left: .6rem;
+}
+#boxThree img:nth-child(5),#boxTwo img:nth-child(5){
+    width: .8rem;
+    position: absolute;
+    animation: qiqiu 3s linear infinite;
+}
+@keyframes qiqiu{
+    from{
+        top: 6rem;
+        left: 1rem;
+        
+    }
+    to{
+        top: .2rem;
+        left: .2rem;
+    }
+}
+#boxThree img:nth-child(6),#boxTwo img:nth-child(6){
+    width: .8rem;
+    position: absolute;
+    animation: qiqiu1 2.5s linear infinite;
+}
+@keyframes qiqiu1{
+    from{
+        top: 6rem;
+        right: 1rem;
+    }
+    to{
+        top: .2rem;
+        right: .2rem;
+    }
+}
+.bride-line{
+    width: .02rem;
+    height: 1.3rem;
+    margin: 0 auto;
+    background: pink;
+    position: relative;
+}
+.bride-line img{
+    width: .4rem;
+    position: absolute;
+    top: 0.2rem;
+    left: -.15rem;
+}
+#boxThree .bridegroom-intro{
+    margin-top: .5rem;
+}
+#boxThree .bride-line{
+    height: .57rem;
+    position: absolute;
+    top: 0;
+    left: 1.866rem;
+}
+#boxTwo .bride-line img{
+    position: absolute;
+    top: 0.1rem;
+    left: -.15rem;
+}
+.wedding-talk,.wedding-talk1{
+    font-size: .25rem;
+    text-align: center;
+    margin:0.3rem 0 .2rem;
+    padding: 0 .5rem;
+    color: pink;
+    border-bottom: 1px solid palevioletred;
+    border-top: 1px solid palevioletred;
+    transform: translateX(0rem);
+}
+.wedding-talk{
+    animation: talk 2s linear;
+}
+@keyframes talk{
+    from{
+        transform: translateX(4rem);
+    }
+    to{
+        transform: translateX(0rem);
+    }
+}
+#boxFour img{
+    width: 2.5rem;
+    height: 2.5rem;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    transition: .3s linear;
+}
+#boxFour .wedding-img{
+    animation: scale 1.5s linear;
+    margin: .2rem auto;
+}
+@keyframes scale{
+    from{
+        transform: scale(0.5) rotate(30deg);
+    }
+    to{
+        transform: scale(1) rotate(0deg);
+    }
+}
+#boxFour .wedding-img1{
+    animation: scale1 2.5s linear;
+}
+@keyframes scale1{
+    from{
+        transform: scale(0.5) rotate(-30deg);
+    }
+    to{
+        transform: scale(1) rotate(0deg);
+    }
+}
+#boxFive .wedding-img2{
+    width: 4rem;
+    margin-top: .3rem;
+    display: block;
+    animation: img2 2s linear;
+}
+@keyframes img2{
+    from{
+        opacity: 0;
+        transform: scale(0.5);
+        margin-top: 2rem;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+        margin-top: .3rem;
+    }
+}
+.airLine{
+    width: .5rem;
+    animation: airline 10s linear infinite alternate;
+    position: absolute;
+}
+@keyframes airline{
+    0%{
+        transform: rotate(-280deg);
+        top: 1rem;
+        left: 0rem;
+    }
+    25%{
+        transform:rotate(-150deg) ;
+        top: 4rem;
+        left: 3rem;
+    }
+    50%{
+        transform:rotate(-80deg) ;
+        top: 5.5rem;
+        left: 0rem;
+    }
+    75%{
+        transform:rotate(15deg) ;
+        top: 4rem;
+        left: 3rem;
+    }
+    100%{
+        transform:rotate(-80deg) ;
+        top: 1rem;
+        left: 0rem;
+    }
+}

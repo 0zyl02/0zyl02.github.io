@@ -1,0 +1,149 @@
+.back{
+    width: .5rem;
+    height: .5rem;
+    background: url(../img/look/back.png) center no-repeat;
+    background-size: .4rem;
+    margin: .2rem 0 0 .2rem;
+    display: block;
+}
+.invite-box{
+    position: relative;
+    /* width: 3rem; */
+    overflow: hidden;
+    /* display: flex; */
+}
+.invite-box li{
+    font-size: .4rem;
+    width: 1.43rem;
+    height: 2rem;
+    border: 1px solid blue;
+    float: left;
+    margin: 0.2rem .15rem .3rem;
+    padding: .1rem;
+    border-radius: .2rem;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+.invite-box p{
+    font-size: .2rem;
+    text-align: center;
+}
+.invite-box a{
+    width: 1rem;
+    height: .4rem;
+    line-height: .4rem;
+    font-size: .15rem;
+    color: #515151;
+    border-radius: .1rem;
+    background:linear-gradient(90deg,lightyellow,lightgreen);
+    display: inline-block;
+    position: relative;
+    padding-left: .3rem;
+    text-align: left;
+}
+.invite-box img{
+    display: inline-block;
+}
+.invite-box li:nth-child(2n){
+    /* margin-left: .3rem; */
+    margin-left: 0rem;
+}
+.birth-cake{
+    width: .8rem;
+    margin: 0 auto;
+}
+.btn-dec{
+    width: .3rem;
+    position: absolute;
+    top: 0.05rem;
+    animation: fire .8s linear infinite alternate;
+}
+@keyframes fire{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.birth-candle{
+    width: .5rem;
+    position: absolute;
+    left: 0rem;
+    transform: rotate(30deg);
+    bottom: 0;
+    animation: candle 1s linear infinite alternate;
+}
+@keyframes candle{
+    0%{
+        transform: scale(1) rotate(30deg);
+
+    }
+    100%{
+        transform: scale(1.2) rotate(10deg);
+    }
+}
+.wedding-flower{
+    width: .7rem;
+    margin: .1rem auto 0;
+}
+.party-champagne{
+    width: .9rem;
+    margin: 0.1rem auto -.1rem;
+}
+.festival-giftflower{
+    width: 1rem;
+    margin: 0.1rem auto -.2rem;
+}
+.festival-fireworks1{
+    width: 1rem;
+    position: absolute;
+    left: -.2rem;
+    top: 0;
+}
+.festival-fireworks2{
+    width: .45rem;
+    top: 0;
+    animation: fire 1s linear infinite alternate;
+
+}
+.meeting-laptop{
+    width: 1rem;
+    margin: 0.1rem auto -.2rem;
+}
+.annual-laptop{
+    width: .8rem;
+    margin: 0.1rem auto 0rem;
+}
+.annual-laptop1{
+    width: .25rem;
+    right: 0.08rem;
+    animation: fire .6s linear infinite alternate;
+
+}
+.invite-box .invite-item-click{
+    transform: scale(1.5);
+    z-index: 3;
+    /* position: fixed;
+    top: 50%;
+    left: 50%; */
+}
+.invite-box .birth{
+    border: 1px solid #dd9014;
+}
+.invite-box .wedding{
+    border: 1px solid pink;
+}
+.invite-box .party{
+    border: 1px solid orange;
+}
+.invite-box .festival{
+    border: 1px solid red;
+}
+.invite-box .annual{
+    border: 1px solid blue;
+}
+.invite-box .meeting{
+    border: 1px solid grey;
+}

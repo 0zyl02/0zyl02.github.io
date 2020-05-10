@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.css">
+    <style>
+        .title{
+            font-size: .3rem;
+            text-align: center;
+            color: aqua;
+            margin-top: .6rem;
+        }
+        .make-btn,.look-btn{
+            animation: aa 1s linear;
+            font-size: .24rem;
+            color: black;
+            text-align: center;
+            display: block;
+            margin-top: .3rem;
+        }
+
+        .dialog{
+            font-size: .5rem;
+            background: #EEE;
+            padding: .3rem .2rem;
+            /* position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%); */
+            border-radius: .25rem;
+            position: relative;
+        }
+        .dialog div{
+            display: flex;
+        }
+        .dialog-title{
+            /* width: rem; */
+            font-size: .24rem;
+            text-align: center;
+        }
+        .login,.register{
+            font-size: .2rem;
+            padding: .1rem .2rem;
+            text-align: center;
+            background: lightblue;
+            color: #FFF;
+            margin-left: .5rem;
+            margin: 0 auto;
+            border-radius: .1rem;
+        }    
+        .letter {
+            margin: 1.5rem auto 0;
+            position: relative;
+            background: transparent;
+            height: 0;
+            width: 0;
+            border-top: .8rem solid transparent;
+            border-bottom: .5rem solid #7CC0C8;
+            border-left: 1rem solid #95DAE2;
+            border-right: 1rem solid #9BDEE6;
+        }
+        .letter:before {
+            z-index: -2;
+            content: '';
+            position: absolute;
+            height: 1.4rem;
+            width: 1.4rem;
+            background: #CCE3E6;
+            transform: rotate(45deg) translate(-50%, -50%);
+            left: -.7rem;
+            top: -.5rem;
+        }
+        .letter:after {
+            font-family: 'Roboto Condensed', sans-serif;
+            z-index: -1;
+            content: 'Welcome 🥳';
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #866FFF;
+            position: absolute;
+            height: 1rem;
+            width: 1.4rem;
+            background: white;
+            left: -.7rem;
+            animation: pop 1500ms infinite ease-in-out;
+            }
+        @keyframes pop {
+            0% {
+                top: -1.4rem;
+            }
+            40% {
+                top: -1.4rem;
+                transform: rotate(0deg);
+            }
+            70% {
+                top: -.6rem;
+                transform: rotate(8deg);
+            }
+            100% {
+                top: -1.4rem;
+            }
+            }
+    </style>
+</head>
+<body>
+    <p class="title">智能邀请函</p>
+    <a href="make.html" class="make-btn">制作邀请函</a>
+    <a href="look.html" class="look-btn">查看邀请函</a>
+    <!-- <div class="dialog">
+        <p class="dialog-title">请先登录</p>
+        <div>
+            <a href="login.html" class="login">登录</a>
+            <a href="register.html" class="register">注册</a>
+        </div>
+        
+    </div> -->
+    <div class="letter"></div>
+    
+</body>
+</html>

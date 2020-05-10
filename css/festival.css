@@ -1,0 +1,363 @@
+body{
+    overflow: hidden;
+}
+.festival-box{
+    background: rgb(205,44,60);
+    position: relative;
+    height: 6.76rem;
+    overflow: hidden;
+}
+.one-title{
+    color: rgb(244,218,154);
+    text-align: center;
+    padding: .6rem 0;
+    font-size: .5rem;
+    animation: showt 1s linear;
+}
+@keyframes showt{
+    from{
+        transform: scale(0.3);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.one-dec{
+    display: flex;
+    margin: 0 auto;
+    width: 2rem;
+}
+.one-dec img{
+    width: .3rem;
+    height: .3rem;
+    margin-left: .1rem;
+    animation: shan 1s linear infinite alternate;
+}
+@keyframes shan{
+    from{
+        transform: scale(0.8);
+    }
+    to{
+        transform: scale(1.2);
+    }
+}
+.festival-dec{
+    position: absolute;
+    display: block;
+}
+.festival-dec:nth-last-child(1){
+    width: 1.2rem;
+    bottom: 0;
+}
+.festival-dec:nth-last-child(2){
+    width: .5rem;
+    right: .3rem;
+    top: 1rem;
+    animation: zhuan 1s linear infinite alternate;
+}
+@keyframes zhuan{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(-45deg);
+    }
+}
+.festival-dec:nth-last-child(3){
+    width: .8rem;
+    top: 2.3rem;
+    left: 1rem;
+}
+.festival-dec:nth-last-child(4){
+    width: .75rem;
+    top: 2.3rem;
+    left: 2rem;
+}
+.one-intro{
+    font-size: .3rem;
+    color: yellow;
+    font-weight: bold;
+    text-align: center;
+    margin: 1.5rem 0 .2rem;
+    animation: move 1s linear;
+}
+@keyframes move{
+    from{
+        transform: translateX(4rem);
+    }
+    to{
+        transform: translateX(0rem);
+    }
+}
+.one-intro1{
+    font-size: .2rem;
+    color: burlywood;
+    text-align: center;
+    animation: move1 1s linear;
+}
+@keyframes move1{
+    from{
+        transform: translateX(-4rem);
+    }
+    to{
+        transform: translateX(0rem);
+    }
+}
+.two-title{
+    font-size: .4rem;
+    color: burlywood;
+    text-align: center;
+    margin: .5rem 0 .2rem;
+}
+.title-dec{
+    width: .5rem;
+    position: absolute;
+}
+.title-dec:nth-child(2){
+    top: .6rem;
+    left: .2rem;
+    transform: rotate(90deg);
+    animation: zhuan1 1s linear infinite alternate;
+}
+@keyframes zhuan1{
+    from{
+        transform: rotate(90deg);
+    }
+    to{
+        transform: rotate(120deg);
+    }
+}
+.title-dec:nth-child(3){
+    top: .6rem;
+    right: .2rem;
+    animation: zhuan2 .8s linear infinite alternate;
+}
+@keyframes zhuan2{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(-30deg);
+    }
+}
+.two-intro{
+    width: 3rem;
+    height: 2.5rem;
+    overflow: hidden;
+    border-radius: .2rem;
+    background: rgb(240, 149, 149);
+    font-size: .2rem;
+    margin: 0 auto;
+    padding: .2rem .1rem;
+    animation: show2 1s linear;
+    text-indent: .4rem;
+}
+.two-content{
+    width: 3rem;
+    border-radius: .2rem;
+    background: #FFF;
+    margin: .3rem auto 0;
+    padding: .2rem .1rem .3rem .1rem;
+    position: relative;
+    animation: show3 1.5s linear;
+}
+.two-content img{
+    width: .5rem;
+    position: absolute;
+    bottom: 0.2rem;
+    left: 0.2rem;
+    animation: scale 1s linear infinite alternate;
+}
+@keyframes scale{
+    from{
+        transform: scale(0.8) rotate(30deg);
+    }
+    to{
+        transform: scale(1) rotate(0deg);
+    }
+}
+.two-content span{
+    font-size: .2rem;
+    color: darkred;
+    display: block;
+    text-align: center;
+    margin-bottom: .1rem;
+}
+.two-content .content1{
+    font-size: .25rem;
+}
+#boxThree .three-title,.four-title,.five-title,#boxSix .six-title{
+    font-size: .3rem;
+    text-align: center;
+    padding: .5rem 0;
+    color: yellow;
+}
+.four-title,.five-title,#boxSix .six-title{
+    padding: .3rem 0;
+}
+#boxThree p{
+    font-size: .22rem;
+}
+.three-intro1,.three-intro2{
+    width: 3rem;
+    height: 1.3rem;
+    position: relative;
+    border: .01rem solid rgb(97, 3, 3);
+    padding: .3rem .1rem;
+    margin: 0 auto .5rem;
+    border-radius: .1rem;
+    animation: show 1s linear;
+}
+.three-intro2{
+    animation: show1 1.5s linear;
+
+}
+.three-intro1-title,.three-intro2-title{
+    position: absolute;
+    width: 1.5rem;
+    font-size: .25rem;
+    text-align: center;
+    border-radius: .05rem;
+    border: .01rem solid rgb(97, 3, 3);
+    top: -.18rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgb(205,44,60);
+    color: rgb(245, 152, 30);
+    padding: .05rem;
+}
+.three-intro1-content,.three-intro2-content{
+    text-indent: .5rem;
+    color: #F5981E;
+}
+@keyframes show{
+    from{
+        transform: translateX(4rem);
+    }
+    to{
+        transform: translateX(0rem);
+    }
+}
+@keyframes show1{
+    from{
+        transform: translateX(-4rem);
+    }
+    to{
+        transform: translateX(0rem);
+    }
+}
+@keyframes show2{
+    from{
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.three-intro1 img{
+    position: absolute;
+    top: -.3rem;
+    left: -0.2rem;
+}
+.three-intro2 img{
+    position: absolute;
+    bottom: 0rem;
+    right: 0rem;
+}
+.four-goods{
+    width: 3.35rem;
+    display: flex;
+    border: 1px solid rgb(201, 165, 5);
+    border-radius: .05rem;
+    height: 2.35rem;
+    overflow: scroll;
+    padding: .1rem;
+    margin:0 auto .2rem;
+}
+.four-goods img{
+    width: 1rem;
+    height: 1.2rem;
+    margin-top: .6rem;
+    animation: show3 linear 1.5s;
+}
+@keyframes show3{
+    from{
+        opacity: 0;
+        transform: scale(2);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.four-goods p{
+    font-size: .2rem;
+    margin-left: .2rem;
+    animation: show linear 1s;
+}
+#boxFive img{
+    display: block;
+    width: 3rem;
+    height: 1.5rem;
+    margin: 0 auto .2rem;
+}
+#boxFive img:nth-child(2){
+    animation: show 1s linear;
+}
+#boxFive img:nth-child(3){
+    animation: show1 1s linear;
+}
+#boxFive img:nth-child(4){
+    animation: show3 1s linear;
+}
+@keyframes show3{
+    from{
+        transform: translateY(4rem);
+    }
+    to{
+        transform: translateY(0rem);
+    }
+}
+#boxSix p,#boxSix span{
+    font-size: .2rem;
+    text-align: center;
+    margin-top: .2rem;
+}
+#boxSix img{
+    width: 3.2rem;
+    height: 2.8rem;
+    margin: .2rem auto 0;
+    display: block;
+}
+#boxSix a{
+    width: 1.2rem;
+    font-size: .2rem;
+    color: #FFFFFF;
+    background: skyblue;
+    padding: .1rem .3rem;
+    margin: 0.3rem auto 0;
+    display: block;
+    text-align: center;
+}
+#boxSix p:nth-child(1){
+    animation: show 1s linear;
+}
+#boxSix p:nth-child(3){
+    animation: show 1s linear;
+}
+#boxSix p:nth-child(4){
+    animation: show1 1.8s linear;
+}
+#boxSix p:nth-child(5){
+    animation: show 2s linear;
+}
+#boxSix p:nth-child(6){
+    animation: show1 1.5s linear;
+}
+#boxSix img{
+    animation: show2 2s linear;
+}

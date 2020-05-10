@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我们毕业了</title>
+    <link rel="stylesheet" href="css/all.css">
+    <style>
+        body{
+            overflow: hidden;
+        }
+        .gradute-box{
+            background: url(img/gradute/bg.png) center 0;
+            background-size: 4.5rem;
+            height: 6.17rem;
+            position: relative;
+            padding-top: .5rem;
+            overflow: hidden;
+        }
+        p{
+            font-size: .25rem;
+            color: #FFF;
+        }
+        .one-title{
+            width: .35rem;
+            font-size: .25rem;
+            text-align: center;
+            margin: 0 auto;
+            z-index: 2;
+            animation: show2 1s linear;
+        }
+        .one-title1{
+            font-size: .8rem;
+            width: 1.6rem;
+            margin: 0 auto;
+            z-index: 2;
+            animation: show2 1.5s linear;
+        }
+        .one-circle,.one-circle1{
+            width: 1.8rem;
+            height: 1.8rem;
+            border: 1px solid rgba(255,255,255,0.5);
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+            position: absolute;
+            top: 1.2rem;
+            left: 1rem;
+            z-index: 1;
+            animation: rotate 2.5s linear infinite;
+        }
+        @keyframes rotate{
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        .one-line,.one-line1{
+            position: absolute;
+            width: .4rem;
+            display: block;
+            top: 0rem;
+            left: 1.5rem;
+            transform: rotate(50deg);
+        }
+        .one-line1{
+            top: 1.2rem;
+            left: -0.28rem;
+            transform: rotate(-120deg);
+        }
+        .young{
+            font-size: .5rem;
+            text-align: center;
+            margin-top: .3rem;
+            animation: show2 2s linear;
+        }
+        .one-intro,.one-intro1{
+            font-size: .2rem;
+            text-align: center;
+            color:rgb(35,163,211);
+            animation: show 2s linear;
+        }
+        .one-intro{
+            margin: .3rem 0 .1rem;
+            animation: show1 2s linear;
+        }
+        @keyframes show{
+            from{
+                transform: translateX(4rem);
+            }
+            to{
+                transform: translateX(0);
+            }
+        }
+        @keyframes show1{
+            from{
+                transform: translateX(-4rem);
+            }
+            to{
+                transform: translateX(0);
+            }
+        }
+        @keyframes show2{
+            from{
+                transform: scale(.5);
+                opacity: 0;;
+            }
+            to{
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        .box-content{
+            width: 3rem;
+            height: 5.2rem;
+            margin: 0 auto;
+            border-radius: .2rem;
+            border: 1px solid skyblue;
+            background: rgba(0,0,0,0.1);
+            padding: .2rem .15rem 0 .25rem;
+            animation: show2 1s linear;
+        }
+        .two-title{
+            font-size: .4rem;
+            text-align: center;
+        }
+        .two-intro{
+            font-size: .2rem;
+            text-align: center;
+            margin: .15rem 0;
+        }
+        .two-content{
+            font-size: .16rem;
+            text-indent: .36rem;
+            line-height: .22rem;
+        }
+        #boxTwo img{
+            position: absolute;
+            top: 0.6rem;
+            right: 0.2rem;
+        }
+        
+        .three-title,.four-title{
+            font-size: .4rem;
+            text-align: center;
+            margin-top: -.2rem;
+        }
+        #boxThree,#boxFour{
+            padding: 0.5rem .2rem 0;
+        }
+        #boxThree img ,#boxFour img{
+            position: absolute;
+            height: 1.8rem;
+        }
+        .three-img1,.four-img1{
+            width: 2.5rem;
+            top: 1rem;
+            left: .1rem;
+            animation: show2 1.5s linear;
+        }
+        .three-img2,.four-img2{
+            width: 3rem;
+            top: 2.8rem;
+            right: 0;
+            animation: show1 1.8s linear;
+        }
+        .three-img3,.four-img3{
+            width: 3rem;
+            top: 4.5rem;
+            left: .15rem;
+            animation: show2 2s linear;
+        }
+        .three-intro,.four-intro{
+            width: .25rem;
+            margin-left: 3rem;
+            animation: shan 1s linear infinite alternate;
+            position: absolute;
+        }
+        @keyframes shan{
+            from{
+                opacity: 0;
+                transform: scale(0.6);
+            }
+            to{
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        .five-title{
+            font-size: .4rem;
+            text-align: center;
+        }
+        #boxFive span{
+            font-size: .2rem;
+            color: #FFF;
+        }
+        .five-content{
+            text-indent: .4rem;
+            font-size: .2rem;
+            line-height: .3rem;
+            margin: .4rem 0 .2rem;
+        }
+        .five-head,.five-time,.five-address{
+            font-size: .2rem;
+            color: rgb(21, 73, 168);
+            line-height: .4rem;
+            animation: show1 2s linear;
+        }
+        .five-time{
+            animation: show 2s linear;
+        }
+        .five-address{
+            animation: show1 2s linear;
+        }
+        .five-dec,.five-dec1{
+            position: absolute;
+            animation: show2 3s linear;
+        }
+        .five-dec{
+            left: 2.7rem;
+            animation: show2 2.5s linear;
+        }
+    </style>
+</head>
+<body>
+    <p class="music-play">
+        <audio class="play-btn" autoplay id="music1" hidden>
+            <source src="audio/birth.mp3" type="audio/mpeg">
+        </audio>
+        <img class="music-line" src="img/all/line.png" alt="">
+    </p>
+    <a class="home" href="index.html"></a>
+    <p class="arrow"></p>
+    <div class="gradute-box" id="boxOne">
+        <p class="one-title">不毕业的</p>
+        <p class="one-title1">青春</p>
+        <p class="one-circle">
+            <img class="one-line" src="img/gradute/line.png" alt="">
+            <img class="one-line1" src="img/gradute/line.png" alt="">
+        </p>
+        <p class="young">young</p>
+        <p class="one-intro">青春不散场</p>
+        <p class="one-intro1">海阔天空任我们飞</p>
+    </div>
+    <div class="gradute-box" id="boxTwo">
+        <div class="box-content">
+            <p class="two-title">邀请函</p>
+            <p class="two-intro">诚挚邀请您的参与</p>
+            <p class="two-content">时光流逝，很多的事情都在变，但是我相信我们的友情不论是经过多长时间，都是如现在一般，我非常的珍惜在学校这个阶段的友情，因为我知道这是非常纯粹的，非常的简单的，我们以后可能学习生活的地方都在不在同一个地方，但是只要我们知道有彼此这个朋友，就足够了。人生总要分别，这次的分别，是为了更好的相遇，我们都在为了自己的未来努力，相信我们再次见面时，我们都会有所成就，祝福你，我的朋友！我们马上就要去为了生活而奔波了，可能在途中会遇到很多的困难，但是在你感觉孤独的时候，千万不要忘记我这个同学，你有什么困难也可以和我说，只要我能做的，我一定会尽力的，这就是朋友，这就是同学。</p>
+            <img src="img/gradute/pen.png" alt="">
+        </div>
+    </div>
+    <div class="gradute-box" id="boxThree">
+        <p class="three-title">我们的青春</p>
+        <p class="three-intro">青春不散场</p>
+        <img class="three-img1" src="img/gradute/people1.png" alt="">
+        <img class="three-img2" src="img/gradute/people2.png" alt="">
+        <img class="three-img3" src="img/gradute/people3.png" alt="">
+    </div>
+    <div class="gradute-box" id="boxFour">
+        <p class="four-title">老师的付出</p>
+        <p class="four-intro">老师辛苦了</p>
+        <img class="four-img1" src="img/gradute/teacher.png" alt="">
+        <img class="four-img2" src="img/gradute/teacher1.png" alt="">
+        <img class="four-img3" src="img/gradute/teacher2.png" alt="">
+    </div>
+    <div class="gradute-box" id="boxFive">
+        <div class="box-content">
+            <img class="five-dec" src="img/gradute/student1.png" alt="">
+            <img class="five-dec1" src="img/gradute/student2.png" alt="">
+            <p class="five-title">欢迎你来</p>
+            <p class="five-content">毕业，是我们夜半梦醒，触碰不到而无限感伤的虚词。若干年后，假如我们还能够想起那段时光，也许这不属于难忘，也不属于永远，而仅仅是一段记录了成长经历的回忆。毕业季节，愿我们的友谊永远不散。</p>
+            <p class="five-head">活动主题：<span class="head">不说再见</span></p>
+            <p class="five-time">活动时间：<span class="time">X年X月X日</span></p>
+            <p class="five-address">活动地点：<span class="address">学校大礼堂</span></p>
+        </div>
+    </div>
+</body>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/touch-0.2.14.min.js"></script>
+<script src="js/all.js"></script>
+<script>
+    touchFive()
+</script>
+</html>
