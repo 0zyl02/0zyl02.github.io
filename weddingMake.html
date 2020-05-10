@@ -33,6 +33,7 @@
         }
         #start-make{
             width: 1rem;
+            font-size: .25rem;
             background: skyblue;
             color: #FFF;
             border-radius: .2rem;
@@ -40,6 +41,7 @@
             margin: 0 auto;
             margin-top: .2rem;
             padding: .1rem .2rem;
+            display: block;
         }
         .show-box{
             font-size: .2rem;
@@ -82,7 +84,7 @@
 </head>
 <body>
     <p class="music-play">
-        <audio class="play-btn" autoplay id="music1" hidden>
+        <audio class="play-btn" autoplay id="music1" hidden loop="loop">
             <source src="audio/wedding.mp3" type="audio/mpeg">
         </audio>
         <img class="music-line" src="img/all/line.png" alt="">
@@ -97,7 +99,7 @@
             <img class="show-img" src="img/wedding/1.png" alt="">
         </div>
         <span>标题：</span><input class="wedding-title1" type="text" value="我们结婚了"><br>
-        <span>新郎新娘：</span><input class="wedding-person1" type="text" value="某小姐&某先生"><br>
+        <span>新郎新娘：</span><input class="wedding-person1" type="text" value="某小姐&某先生" name="id"><br>
         <p>第二页</p>
         <div class="show-box">
             <p class="show-btn">查看</p>
@@ -145,61 +147,24 @@
         <span>英文：</span><input class="wedding-invite-eng1" type="text" value="sincerely invite"><br>
         <span>活动内容：</span><input class="invite-content1" type="text" value="在最好的年华 相遇，在最美的时光里 相爱，沉浸在幸福中的我们将于2020年5月2日（星期几）几时举办婚礼，诚邀您和您的家人出席见证我们的幸福时刻，诚挚邀请您与我们一起分享神的祝福和爱的喜悦！"><br>
         <span>活动地点：</span><input class="invite-address1" type="text" value="地点：某市某街某某号某某酒店"><br>        
-        <p id="start-make">开始制作</p>
-    </div>
-    <div class="making">
-        <p>制作中。。。。。。</p>
-    </div>
-    <div class="wedding-box" id="boxOne">
-        <div class="boxOne-content">
-            <p class="wedding-title">我们结婚了</p>
-            <img src="img/wedding/heart4.png" alt="">
-            <img src="img/wedding/heart4.png" alt="">
-            <p>——meet you happy——</p>
-            <img src="img/wedding/heart.png" alt="">
-            <p class="wedding-preson">某小姐&某先生</p>
-            <img src="img/wedding/love.png" alt="">
-        </div>
-    </div>
-    <div class="wedding-box" id="boxTwo">
-        <p class="wedding-bride">The Bride</p>
-        <img class="bride-person" src="img/wedding/bride1.jpg" alt="">
-        <p class="bride-intro">新娘：某小姐</p>
-        <img src="img/wedding/heartP1.png" alt="">
-        <img src="img/wedding/qiqiu.png" alt="">
-        <img src="img/wedding/qiqiu.png" alt="">
-        <p class="bride-line"><img src="img/wedding/two-hearts.png" alt=""></p>
-    </div>
-    <div class="wedding-box" id="boxThree">
-        <p class="bridegroom-intro">新郎：某先生</p>
-        <img class="bridegroom-person" src="img/wedding/bridegroom.jpg" alt="">
-        <p class="wedding-bridegroom">The Bridegroom</p>
-        <img src="img/wedding/heartP.png" alt="">
-        <img src="img/wedding/qiqiu.png" alt="">
-        <img src="img/wedding/qiqiu.png" alt="">
-        <p class="bride-line"><img src="img/wedding/two-hearts.png" alt=""></p>
-    </div>
-    <div class="wedding-box" id="boxFour">
-        <img class="wedding-img" src="img/wedding/bride.jpg" alt="">
-        <p class="wedding-talk">遇见你,是我所有故事的开始。</p>
-        <img class="wedding-img1" src="img/wedding/bride1.jpg" alt="">
-    </div>
-    <div class="wedding-box" id="boxFive">
-        <p class="wedding-talk1">春风十里不如你</p>
-        <img class="wedding-img2" src="img/wedding/bride.jpg" alt="">
-        <img class="airLine" src="img/wedding/airline.png" alt="">
-    </div>
-    <div class="wedding-box" id="boxSix">
-        <p class="wedding-invite">诚挚邀请</p>
-        <p class="wedding-invite-eng">sincerely invite</p>
-        <p class="invite-content">在最好的年华 相遇，在最美的时光里 相爱，沉浸在幸福中的我们将于2020年5月2日（星期几）几时举办婚礼，诚邀您和您的家人出席见证我们的幸福时刻，诚挚邀请您与我们一起分享神的祝福和爱的喜悦！</p>        
-        <p class="invite-address">地点：某市某街某某号某某酒店</p>
+        <a id="start-make" onclick="getParams()">开始制作</a>
     </div>
 </body>
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/touch-0.2.14.min.js"></script>
 <script src="js/all.js"></script>
 <script>
+        function getParams(){
+        var make = document.getElementById("start-make")
+        var a1 = $(".wedding-title1").val(),a2 = $(".wedding-person1").val(),
+            b1=$(".wedding-bride1").val(),b2=$(".bride-intro1").val(),b3=$(".bride-person1").attr('src'),
+            c1 =$(".wedding-bridegroom1").val(),c2 =$(".bridegroom-intro1").val(),c3 =$(".bridegroom-person1").attr('src'),
+            d1= $(".wedding-img11").attr('src'),d2=$(".wedding-talk11").val(),d3=$(".wedding-img111").attr('str'),
+            e1=$(".wedding-img2").attr('src'),e2=$(".wedding-talk111").val(),
+            f1=$(".wedding-invite1").val(),f2=$(".wedding-invite-eng1").val(),f3=$(".invite-content1").val(),f4=$(".invite-address1").val()
+            make.href="weddingCard.html?name="+ $(".wedding-person1").val()+"&a1="+a1+"&a2="+a2+"&b1="+b1+"&b2="+b2+"&b3="+b3+
+            "&c1="+c1+"&c2="+c2+"&c3="+c3+"&d1="+d1+"&d2="+d2+"&d3="+d3+"&e1="+e1+"&e2="+e2+"&f1="+f1+"&f2="+f2+"&f3="+f3
+    }
      //查看
      $(".show-btn").click(function(){
         $(".show-bg").show()
@@ -213,42 +178,6 @@
         let src = getObjectURL(this.files[0]);
         $(this).next('img').attr('src',src);
         $(this).next('img').css('display',"block");
-        // $(this).parent().find('img').attr('src',src);
-    })
-    $("#start-make").click(function(){
-        //一页
-        $(".wedding-title").html($(".wedding-title1").val())
-        $(".wedding-person").html($(".one-person1").val())
-        //二页
-        $(".wedding-bride1").html($(".wedding-bride1").val())
-        $(".bride-intro").html($(".bride-intro1").val())
-        $(".bride-person").attr('src',$(".bride-person1").attr('src'))
-        //三页
-        $(".wedding-bridegroom").html($(".wedding-bridegroom1").val())
-        $(".bridegroom-intro").html($(".bridegroom-intro1").val())
-        $(".bridegroom-person").attr('src',$(".bridegroom-person1").attr('src'))
-        //四页
-        $(".wedding-img").attr('src',$("wedding-img11").attr('src'))
-        $(".wedding-talk").html($(".wedding-talk11").val())
-        $(".wedding-img1").attr('src',$(".wedding-img111").attr('src'))
-        //五页
-        $(".wedding-img2").attr('src',$("wedding-img21").attr('src'))
-        $(".wedding-talk1").html($(".wedding-talk111").val())
-        //六页
-        $(".wedding-invite").html($(".wedding-invite1").val())
-        $(".wedding-invite-eng").html($(".wedding-invite-eng1").val())
-        $(".invite-content").html($(".invite-content1").val())
-        $(".invite-address").html($(".invite-address1").val())
-
-        $(".upload-box").hide()
-        setTimeout(function(){
-            $(".making").show(200,function(){
-                $(".making").hide(2000,function(){
-                    $("#boxOne").slideDown(500)
-                    document.body.style.overflow = 'hidden'
-                })
-            })
-        })
     })
 
 // 判断浏览器是否支持 createObjectURL api

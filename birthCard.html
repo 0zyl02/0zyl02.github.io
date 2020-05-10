@@ -3,11 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>生日快乐</title>
 </head>
 <link rel="stylesheet" href="css/all.css">
 <link rel="stylesheet" href="css/birth.css">
 <body>
+    <p class="music-play">
+        <audio class="play-btn" autoplay id="music1" hidden loop="loop">
+            <source src="audio/wedding.mp3" type="audio/mpeg">
+        </audio>
+        <img class="music-line" src="img/all/line.png" alt="">
+    </p>
+    <a class="home" href="index.html"></a>
+    <p class="arrow"></p>
     <div class="birth-box" id="boxOne">
         <p class="animate"></p>
         <p class="birth-date"></p>
@@ -53,15 +61,6 @@
 <script src="js/birth.js"></script>
 <script>
     var url = window.location.href
-    // console.log(url.split("?")[1])
-    // console.log(url.match(/&(\S*)&/)[0])
-    // var a1 = str = url.split("&")[0]
-
-    // console.log(a1)
-    // var a2 = url.match(/&(\S*)&/)[1]
-    // var a3 = url.match(/&(\S*)&/)[2]
-    // console.log(url)
-
     var object = new Object, urls = document.location.search.substr(1).split("&");
         for (i = 0; i < urls.length; i++) {
         　　var url = urls[i].split("=");

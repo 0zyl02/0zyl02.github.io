@@ -70,19 +70,6 @@
     left: .1rem;
     z-index: 10;
 }
-.share{
-    width: .4rem;
-    height: .4rem;
-    background: url(../img/all/share.png) no-repeat center;
-    background-size: .3rem;
-    display: block;
-    border-radius: 50%;
-    border: 1px solid rgb(81,81,81);
-    position: fixed;
-    top: .2rem;
-    left: 65%;
-    z-index: 10;
-}
 @media screen and (max-width: 320px) {
 	* {
 		font-size: 84px;
@@ -149,7 +136,7 @@
 
 @media only screen and (min-width: 415px) and (max-width: 768px) {
 	* {
-		font-size: 135px;
+		font-size: 120px;
 	}
 }
 

@@ -255,12 +255,15 @@
         }
         #start-make{
             width: 1rem;
+            font-size: .25rem;
             background: skyblue;
             color: #FFF;
             border-radius: .2rem;
             text-align: center;
-            margin: .2rem auto .5rem;
+            margin: 0 auto;
+            margin-top: .2rem;
             padding: .1rem .2rem;
+            display: block;
         }
         .show-box{
             font-size: .2rem;
@@ -304,7 +307,7 @@
 </head>
 <body>
     <p class="music-play">
-        <audio class="play-btn" autoplay id="music1" hidden>
+        <audio class="play-btn" autoplay id="music1" hidden loop="loop">
             <source src="audio/meeting.mp3" type="audio/mpeg">
         </audio>
         <img class="music-line" src="img/all/line.png" alt="">
@@ -318,7 +321,7 @@
             <p class="show-btn">查看</p>
             <img class="show-img" src="img/meeting/1.png" alt="">
         </div>
-        <span>介绍1：</span><input class="one-intro11" type="text" value="企业高峰论坛，梦想铸就辉煌"><br>
+        <span>介绍1：</span><input class="one-intro11" type="text" value="企业高峰论坛，梦想铸就辉煌" name="id"><br>
         <span>介绍2：</span><input class="one-intro21" type="text" value="企业高峰论坛，梦想铸就辉煌"><br>
         <span>图片logo：</span><input class="upload-input" type="file" value="">
         <img class="box-dec1" src="img/meeting/star1.png" alt="">
@@ -364,73 +367,24 @@
         <span>活动地址：</span><input class="five-address1" type="text" value="XX市XX街XX酒店"><br>
         <span>活动时间：</span><input class="five-time1" type="text" value="2020年X月X日"><br>
         
-        <p id="start-make">开始制作</p>
+        <a id="start-make" onclick="getParams()">开始制作</a>
     </div>
-    <div class="making">
-        <p>制作中。。。。。。</p>
-    </div>
-    <div class="meeting-box" id="boxOne">
-        <p class="one-title">
-            邀请函 
-            <span class="one-title1">邀请函</span>
-            <img class="one-dec" src="img/meeting/star.png" alt="">
-            <img class="one-dec1" src="img/meeting/star.png" alt="">
-        </p>
-        <p class="one-intro1">企业高峰论坛，梦想铸就辉煌</p>
-        <p class="one-intro2">企业高峰论坛，梦想铸就辉煌</p>
-        <img class="box-dec" src="img/meeting/star1.png" alt="">
-    </div>
-    <div class="meeting-box" id="boxTwo">
-        <p class="two-title">【诚挚邀请】</p>
-        <p class="two-call">尊敬的女士/先生</p>
-        <p class="two-content">xx电子股份有限公司将于20xx年1月8-10日在北京xx大酒店举办“20xxxx世纪公司年会”。我们诚挚邀请您出席本届年会。本次年会主题为“分享·融合·共赢”，旨在为光伏晶硅企业搭建平台，分享专家对产业、行业发展趋势以及国家产业政策趋势的分析与预测，推进政府与企业、企业与企业之间的对接，推动相关政策与商业智慧的融合，为增强中国光伏晶硅企业核心竞争力、开启产业辉煌贡献绵薄之力。</p>
-    </div>
-    <div class="meeting-box" id="boxThree">
-        <p class="three-title">特邀嘉宾</p>
-        <img class="three-img" src="img/meeting/chara.png" alt="">
-        <p class="three-content-name">总经理 XX</p>    
-        <p class="three-content">科学技术的进步将会给人们的生活带来巨大的影响，而人们要不断适应这种时代的变化，而不要坐等未来，失去自我发展的良好机会。</p>    
-    </div>
-    <div class="meeting-box" id="boxFour">
-        <p class="four-title">
-            会议流程
-        </p>
-        <div class="four-content-box">
-            <div class="time-line">
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-            </div>
-            <div class="content-right">
-                 <p class="time1">AM 08:00-09:00 -- 主持开场</p>
-                 <p class="time2">AM 09:00-10:00 -- 会议介绍</p>
-                 <p class="time3">AM 10:00-11:00 -- 嘉宾介绍</p>
-                 <p class="time4">AM 11:00-12:00 -- 主题讲解</p>
-                 <p class="time5">PM 12:00-13:00 -- 中场休息</p>
-                 <p class="time6">PM 13:00-14:00 -- 产品介绍</p>
-                 <p class="time7">PM 14:00-15:00 -- 会议总结</p>
-                 <p class="time8">PM 15:00-16:00 -- 会议结束</p>
-            </div>
-        </div>
-    </div>
-    <div class="meeting-box" id="boxFive">
-        <p class="five-title">会议信息</p>
-        <img class="five-img" src="img/all/map.jpg" alt="">
-        <p>活动地址:</p>
-        <p class="five-address">XX市XX街XX酒店</p>
-        <p>活动时间:</p>
-        <p class="five-time">2020年X月X日</p>
-    </div>
+
 </body>
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/touch-0.2.14.min.js"></script>
 <script src="js/all.js"></script>
 <script>
+    function getParams(){
+        var make = document.getElementById("start-make")
+        var a1 = $(".one-intro11").val(),a2=$(".one-intro21").val(),a3= $(".box-dec1").attr('src'),
+            b1=$(".two-title1").val(),b2=$(".two-call1").val(),b3=$(".two-content1").val(),
+            c1 =$(".three-title1").val(),c2 =$(".three-img1").attr('src'),c3 =$(".three-content-name1").val(),c4 =$(".three-content1").val(),
+            d1= $(".time11").val(),d2=$(".time21").val(),d3=$(".time31").val(),d4=$(".time41").val(),d5=$(".time51").val(),d6=$(".time61").val(),d7=$(".time71").val(),d8=$(".time81").val(),
+            e1=$(".five-title1").val(),e2=$(".five-img1").attr('src'),e3=$(".five-address1").val(),e4=$(".five-time1").val()
+            make.href="meetingCard.html?name="+ $(".one-intro11").val()+"&a1="+a1+"&a2="+a2+"&a3="+a3+"&b1="+b1+"&b2="+b2+"&b3="+b3+
+            "&c1="+c1+"&c2="+c2+"&c3="+c3+"&c4="+c4+"&d1="+d1+"&d2="+d2+"&d3="+d3+"&d4="+d4+"&d5="+d5+"&d6="+d6+"&d7="+d7+"&d8="+d8+"&e1="+e1+"&e2="+e2+"&e3="+e3+"&e4="+e4
+    }
     //查看
     $(".show-btn").click(function(){
         $(".show-bg").show()
@@ -444,44 +398,6 @@
         let src = getObjectURL(this.files[0]);
         $(this).next('img').attr('src',src);
         $(this).next('img').css('display',"block");
-    })
-    $("#start-make").click(function(){
-        //一页
-        $(".one-intro1").html($(".one-intro11").val())
-        $(".one-intro2").html($(".one-intro21").val())
-        $(".box-dec").attr('src',$(".box-dec1").attr('src'))
-        //二页
-        $(".two-title").html($(".two-title1").val())
-        $(".two-call").html($(".two-call1").val())
-        $(".two-content").html($(".two-content1").val())
-        //三页
-        $(".three-title").html($(".three-title1").val())
-        $(".three-content-name").html($(".three-content-name1").val())
-        $(".three-content").html($(".three-content1").val())
-        $(".three-img").attr('src',$(".three-img1").attr('src'))
-        //四页
-        $(".time1").html($(".time11").val())
-        $(".time2").html($(".time21").val())
-        $(".time3").html($(".time31").val())
-        $(".time4").html($(".time41").val())
-        $(".time5").html($(".time51").val())
-        $(".time6").html($(".time61").val())
-        $(".time7").html($(".time71").val())
-        $(".time8").html($(".time81").val())
-        //五页
-        $(".five-title").html($(".five-title1").val())
-        $(".five-img").attr('src',$(".five-img1").attr('src'))
-        $(".five-address").html($(".five-address1").val())
-        $(".five-time").html($(".five-time1").val())
-        $(".upload-box").hide()
-        setTimeout(function(){
-            $(".making").show(200,function(){
-                $(".making").hide(2000,function(){
-                    $("#boxOne").slideDown(500)
-                    document.body.style.overflow = 'hidden'
-                })
-            })
-        })
     })
 
 // 判断浏览器是否支持 createObjectURL api

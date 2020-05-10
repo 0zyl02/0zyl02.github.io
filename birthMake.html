@@ -84,7 +84,7 @@
 </head>
 <body>
     <p class="music-play">
-        <audio class="play-btn" autoplay id="music1" hidden>
+        <audio class="play-btn" autoplay id="music1" hidden loop="loop">
             <source src="audio/birth.mp3" type="audio/mpeg">
         </audio>
         <img class="music-line" src="img/all/line.png" alt="">
@@ -142,9 +142,7 @@
         <span>地址：</span><input class="birth-address1" type="text" value="地点：某某市某某街几号几号"><br>
         <a onclick="getParams()" id="start-make">开始制作</a>
     </div>
-    <div class="making">
-        <p>制作中。。。。。。</p>
-    </div>
+
 </body>
 </html>
 <script src="js/jquery-3.4.1.min.js"></script>

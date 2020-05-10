@@ -36,12 +36,15 @@
         }
         #start-make{
             width: 1rem;
+            font-size: .25rem;
             background: skyblue;
             color: #FFF;
             border-radius: .2rem;
             text-align: center;
-            margin: .2rem auto .5rem;
+            margin: 0 auto;
+            margin-top: .2rem;
             padding: .1rem .2rem;
+            display: block;
         }
         .show-box{
             font-size: .2rem;
@@ -85,7 +88,7 @@
 </head>
 <body>
     <p class="music-play">
-        <audio class="play-btn" autoplay id="music1" hidden>
+        <audio class="play-btn" autoplay id="music1" hidden loop="loop">
             <source src="audio/festival.mp3" type="audio/mpeg">
         </audio>
         <img class="music-line" src="img/all/line.png" alt="">
@@ -99,7 +102,7 @@
             <p class="show-btn">查看</p>
             <img class="show-img" src="img/festival/1.png" alt="">
         </div>
-        <span>标题：</span><input class="one-title1" type="text" value="劳动最光荣"><br>
+        <span>标题：</span><input class="one-title1" type="text" value="劳动最光荣" name="id"><br>
         <span>介绍1：</span><input class="one-intro11" type="text" value="五一劳动节，优惠大酬宾"><br>
         <span>介绍2：</span><input class="one-intro111" type="text" value="全场商品X折起/进店有好礼相送"><br>
         <p>第二页</p>
@@ -133,7 +136,7 @@
         <img class="goodsImg1" src="img/festival/goods1.png" alt=""><br>
         <span>商品1介绍：</span><input class="goods-intro11" type="text" value="联想(Lenovo)的这款联想S41-70-ISE(1TB)自问世以来就备受关注与好评。大厂出品精心打磨的笔记本，每个细节都精雕细刻，让你感受到何谓工匠精神，何谓严苛的质检标准；功能、性能都稳定高效，娱乐？办公？游戏？联想S41-70-ISE(1TB)带你跨界畅游。"><br>
         <span>商品2图片：</span><input class="upload-input" type="file" value="">
-        <img class="goodsImg1" src="img/festival/goods2.png" alt=""><br>
+        <img class="goodsImg2" src="img/festival/goods2.png" alt=""><br>
         <span>商品2介绍：</span><input class="goods-intro21" type="text" value="手机中的华为Mate X是目前市面上用户数量和好评数量都非常多的一款产品。它使用体验非常好，性价比极高，适合各个年龄段的用户选择来满足办公或者家用或者娱乐等不同方面的需求。"><br>
         <p>第五页</p>
         <span>标题：</span><input class="five-title1" type="text" value="-商场环境-"><br>
@@ -156,87 +159,27 @@
         <span>联系人：</span><input class="touch1" type="text" value="X先生"><br>
         <span>邮箱：</span><input class="email1" type="text" value="xxxxxxxxxx@xx.com"><br>
         <span>手机号：</span><input class="phone1" type="text" value="1xxxxxxxxxx"><br>
-        <p id="start-make">开始制作</p>
+        <a id="start-make" onclick="getParams()">开始制作</a>
     </div>
-    <div class="making">
-        <p>制作中。。。。。。</p>
-    </div>
-       
-    <div class="festival-box" id="boxOne">
-        <p class="one-title">劳动最光荣</p>
-        <p class="one-dec">
-            <img src="img/festival/star.png" alt="">
-            <img src="img/festival/star.png" alt="">
-            <img src="img/festival/star.png" alt="">
-            <img src="img/festival/star.png" alt="">
-            <img src="img/festival/star.png" alt="">
-        </p>
-        <p class="one-intro">五一劳动节，优惠大酬宾</p>
-        <p class="one-intro1">全场商品X折起/进店有好礼相送</p>
-        <img class="festival-dec" src="img/festival/laodong3.png" alt=""> 
-        <img class="festival-dec" src="img/festival/worker.png" alt="">
-        <img class="festival-dec" src="img/festival/laodong4.png" alt="">
-        <img class="festival-dec" src="img/festival/laodong5.png" alt="">
-    </div>
-    <div class="festival-box" id="boxTwo">
-        <p class="two-title">关于劳动节</p>
-        <img class="title-dec" src="img/festival/laodong4.png" alt="">
-        <img class="title-dec" src="img/festival/laodong4.png" alt="">
-        <p class="two-intro">
-            国际劳动节又称“五一国际劳动节”、“国际示威游行日”（International Workers' Day或者May Day），是世界上80多个国家的全国性节日。定在每年的五月一日。它是全世界劳动人民共同拥有的节日。中央人民政府政务院于1949年12月作出决定，将5月1日确定为劳动节。
-        </p>
-        <p class="two-content">
-            <span class="content1">-向所有劳动人民致敬-</span>
-            <span class="content2">幸福都是奋斗出来的</span>
-            <span class="content3">尊重劳动  尊重知识</span>
-            <span class="content4">尊重人才  尊重创造</span>
-            <img src="img/festival/fire.png" alt="">
-        </p>
-    </div>
-    <div class="festival-box" id="boxThree">
-        <p class="three-title">-活动钜惠-</p>
-        <div class="three-intro1">
-            <p class="three-intro1-title">优惠大礼一</p>
-            <p class="three-intro1-content">为感谢各位劳动人员的辛勤付出，我们特推出全场商品3折起，活动期间进店消费增送50元代金券。</p>
-            <img src="img/festival/Sale.png" alt="">
-        </div>
-        <div class="three-intro2">
-            <p class="three-intro2-title">优惠大礼二</p>
-            <p class="three-intro2-content">为感谢各位劳动人员的辛勤付出，我们特推出全场商品满减送活动，消费满200减50，满300减100。</p>
-            <img src="img/festival/Sale1.png" alt="">
-        </div>
-    </div>
-    <div class="festival-box" id="boxFour">
-        <p class="four-title">-热卖商品-</p>
-        <div class="four-goods">
-            <img class="goodsImg1" src="img/festival/goods1.png" alt="">
-            <p class="goods-intro1">联想(Lenovo)的这款联想S41-70-ISE(1TB)自问世以来就备受关注与好评。大厂出品精心打磨的笔记本，每个细节都精雕细刻，让你感受到何谓工匠精神，何谓严苛的质检标准；功能、性能都稳定高效，娱乐？办公？游戏？联想S41-70-ISE(1TB)带你跨界畅游。</p>
-        </div>
-        <div class="four-goods">
-            <img class="goodsImg2" src="img/festival/goods2.png" alt="">
-            <p class="goods-intro2">手机中的华为Mate X是目前市面上用户数量和好评数量都非常多的一款产品。它使用体验非常好，性价比极高，适合各个年龄段的用户选择来满足办公或者家用或者娱乐等不同方面的需求。</p>
-        </div>
-    </div>
-    <div class="festival-box" id="boxFive">
-        <p class="five-title">-商场环境-</p>
-        <img class="five-img1" src="img/festival/store1.png" alt="">
-        <img class="five-img2" src="img/festival/store2.png" alt="">
-        <img class="five-img3" src="img/festival/store3.png" alt="">
-    </div>
-    <div class="festival-box" id="boxSix">
-        <p class="six-title">-具体信息-</p>
-        <img class="six-map" src="img/all/map.jpg" alt="">
-        <p>地址：<span class="address">XXX市XXX街几号几号</span></p>
-        <p>联系人：<span class="touch">X先生</span></p>
-        <p>邮箱：<span class="email">xxxxxxxxxx@xx.com</span></p>
-        <p>电话：<span class="phone">1xxxxxxxxxx</span></p>
-    </div>
+
+
 </body>
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/touch-0.2.14.min.js"></script>
 <script src="js/all.js"></script>
 <script>
-        
+    function getParams(){
+        var make = document.getElementById("start-make")
+        var a1 = $(".one-title1").val(),a2=$(".one-intro11").val(),a3= $(".one-intro111").val(),b1=$(".two-title1").val(),b2=$(".two-intro1").val(),
+            b3=$(".content11").val(),b4=$(".content21").val(),b5=$(".content31").val(),b6=$(".content41").val(),c1 =$(".three-title1").val(),
+            c2 =$(".three-intro1-title1").val(),c3 =$(".three-intro1-content1").val(),c4 =$(".three-intro2-title1").val(),c5 =$(".three-intro2-content1").val(),
+            d1= $(".four-title1").val(),d2=$(".goods-intro11").val(),d3=$(".goodsImg1").attr('src'),d4=$(".goods-intro21").val(),d5=$(".goodsImg2").attr('src'),
+            e1=$(".five-title1").val(),e2=$(".five-img11").attr('src'),e3=$(".five-img31").attr('src'),e4=$(".five-img31").attr('src'),
+            f1=$(".six-title1").val(),f2=$(".email1").val(),f3=$(".touch1").val(),f4=$(".address1").val(),f5=$(".phone1").val(),f6=$(".festival-map1").attr('src')
+        make.href="festivalCard.html?name="+ $(".one-title1").val()+"&a1="+a1+"&a2="+a2+"&a3="+a3+"&b1="+b1+"&b2="+b2+"&b3="+b3+"&b4="+b4+"&b5="+b5+
+        "&b6="+b6+"&c1="+c1+"&c2="+c2+"&c3="+c3+"&c4="+c4+"&c5="+c5+"&d1="+d1+"&d2="+d2+"&d3="+d3+"&d4="+d4+"&d5="+d5+"&e1="+e1+"&e2="+e2+"&e3="+e3+"&e4="+e4+
+        "&f1="+f1+"&f2="+f2+"&f3="+f3+"&f4="+f4+"&f5="+f5+"&f6="+f6
+    }
     //查看
     $(".show-btn").click(function(){
         $(".show-bg").show()
@@ -251,54 +194,6 @@
         $(this).next('img').attr('src',src);
         $(this).next('img').css('display',"block");
     })
-$("#start-make").click(function(){
-    //一页
-    $(".one-title").html($(".one-title1").val())
-    $(".one-intro").html($(".one-intro11").val())
-    $(".one-intro1").html($(".one-intro111").val())
-    //二页
-    $(".two-title").html($(".two-title1").val())
-    $(".two-intro").html($(".two-intro1").val())
-    $(".content1").html($(".content11").val())
-    $(".content2").html($(".content21").val())
-    $(".content3").html($(".content31").val())
-    $(".content4").html($(".content41").val())
-    //三页
-    $(".three-title").html($(".three-title1").val())
-    $(".three-intro1-title").html($(".three-intro1-title1").val())
-    $(".three-intro1-content").html($(".three-intro1-content1").val())
-    $(".three-intro2-title").html($(".three-intro2-title1").val())
-    $(".three-intro2-content").html($(".three-intro2-content1").val())
-    
-    //四页
-    $(".four-title").html($(".four-title1").val())
-    $(".goods-intro1").html($(".goods-intro11").val())
-    $(".goodsImg1").attr('src',$(".goodsImg11").attr('src'))
-    $(".goods-intro2").html($(".goods-intro21").val())
-    $(".goodsImg2").attr('src',$(".goodsImg21").attr('src'))
-    //五页
-    $(".five-title").html($(".five-title1").val())
-    $(".five-img1").attr('src',$(".five-img11").attr('src'))
-    $(".five-img2").attr('src',$(".five-img21").attr('src'))
-    $(".five-img3").attr('src',$(".five-img31").attr('src'))
-    //六页
-    $(".six-title").html($(".six-title1").val())
-    $(".email").html($(".email1").val())
-    $(".touch").html($(".touch1").val())
-    $(".address").html($(".address1").val())
-    $(".phone").html($(".phone1").val())
-    $(".festival-map").attr('src',$(".festival-map1").attr('src'))
-
-    $(".upload-box").hide()
-    setTimeout(function(){
-        $(".making").show(200,function(){
-            $(".making").hide(2000,function(){
-                $("#boxOne").slideDown(500)
-                document.body.style.overflow = 'hidden'
-            })
-        })
-    })
-})
 
 // 判断浏览器是否支持 createObjectURL api
 function getObjectURL(file) {  

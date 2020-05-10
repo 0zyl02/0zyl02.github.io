@@ -36,12 +36,15 @@
         }
         #start-make{
             width: 1rem;
+            font-size: .25rem;
             background: skyblue;
             color: #FFF;
             border-radius: .2rem;
             text-align: center;
-            margin: .2rem auto .5rem;
+            margin: 0 auto;
+            margin-top: .2rem;
             padding: .1rem .2rem;
+            display: block;
         }
         .show-box{
             font-size: .2rem;
@@ -85,7 +88,7 @@
 </head>
 <body>
     <p class="music-play">
-        <audio class="play-btn" autoplay id="music1" hidden>
+        <audio class="play-btn" autoplay id="music1" hidden loop="loop">
             <source src="audio/school.mp3" type="audio/mpeg">
         </audio>
         <img class="music-line" src="img/all/line.png" alt="">
@@ -99,7 +102,7 @@
             <p class="show-btn">查看</p>
             <img class="show-img" src="img/school/1.png" alt="">
         </div>
-        <span>标题：</span><input class="one-title1" type="text" value="------好好学习 天天向上-----"><br>
+        <span>标题：</span><input class="one-title1" type="text" value="------好好学习 天天向上-----" name="id"><br>
         <p>第二页</p>
         <div class="show-box">
             <p class="show-btn">查看</p>
@@ -117,7 +120,7 @@
             <p class="show-btn">查看</p>
             <img class="show-img" src="img/school/3.png" alt="">
         </div>
-        <span>标题：</span><input class="two-title1" type="text" value="学校环境"><br>
+        <span>标题：</span><input class="three-title1" type="text" value="学校环境"><br>
         <span>图片1：</span><input class="upload-input" type="file" value="">
         <img class="schoolImg41" src="img/school/school4.jpg" alt=""><br>
         <span>图片2：</span><input class="upload-input" type="file" value="">
@@ -147,63 +150,23 @@
         <span>联系人：</span><input class="touch1" type="text" value="X先生"><br>
         <span>邮箱：</span><input class="email1" type="text" value="xxxxxxxxxx@xx.com"><br>
         <span>手机号：</span><input class="phone1" type="text" value="1xxxxxxxxxx"><br>
-        <p id="start-make">开始制作</p>
-    </div>
-    <div class="making">
-        <p>制作中。。。。。。</p>
-    </div>
-    <div class="school-box" id="boxOne">
-        <div class="box-one-content">
-            <p class="one-head">------好好学习 天天向上-----</p>
-            <p class="one-title">
-                <span>疯</span>
-                <span>狂</span>
-                <span>开</span>
-                <span>学</span>
-                <span>季</span>
-            </p>            
-            <img src="img/school/book.png" alt="">
-            <img src="img/school/book1.png" alt="">
-            <img src="img/school/ruler.png" alt="">
-            <img src="img/school/clock.png" alt="">
-            <img src="img/school/pencil.png" alt="">
-        </div>
-    </div>
-    <div class="school-box" id="boxTwo">
-        <p class="two-title">关于我们</p>
-        <img id="schoolImg1" src="img/school/school.png" alt="">
-        <img id="schoolImg2" src="img/school/school1.png" alt="">
-        <img id="schoolImg3" src="img/school/school2.png" alt="">
-    </div>
-    <div class="school-box" id="boxThree">
-        <p class="two-title">学校环境</p>
-        <img id="schoolImg4" src="img/school/school4.jpg" alt="">
-        <img id="schoolImg5" src="img/school/school5.jpg" alt="">
-        <img id="schoolImg6" src="img/school/school6.jpg" alt="">
-    </div>
-    <div class="school-box" id="boxFour">
-        <p class="four-title">参观学校邀请</p>
-        <p class="four-content-start">尊敬的先生/夫人：</p>
-        <p class="four-content">仰首是春，俯首是秋，XXX学校又迎来了他的开学季，耳听为虚眼见为实，我们诚挚邀请您参加本次学校开学仪式，欢迎您来参观，如能参加，不胜感激。</p>
-        <p class="four-content-end">XXX学校</p>
-        <p class="four-thank">THANKS</p>
-    </div>
-    <div class="school-box" id="boxFive">
-        <p class="five-title">联系我们</p>
-        <img class="school-map" src="img/all/map.jpg" alt="">
-        <p>地址：<span class="address">XXX市XXX街几号几号</span></p>
-        <p>联系人：<span class="touch">X先生</span></p>
-        <p>邮箱：<span class="email">xxxxxxxxxx@xx.com</span></p>
-        <p>电话：<span class="phone">1xxxxxxxxxx</span></p>
-        <div class="birth-touch">
-            <a class="" href="">联系电话</a>
-        </div>
+        <a id="start-make" onclick="getParams()">开始制作</a>
     </div>
 </body>
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/touch-0.2.14.min.js"></script>
 <script src="js/all.js"></script>
 <script>
+    function getParams(){
+        var make = document.getElementById("start-make")
+        var a1 = $(".one-title1").val(),
+            b1=$(".two-title1").val(),b2=$(".schoolImg11").attr('src'),b3=$(".schoolImg21").attr('src'),b4=$(".schoolImg31").attr('src'),
+            c1 =$(".three-title1").val(),c2 =$(".schoolImg41").attr('src'),c3 =$(".schoolImg51").attr('src'),c4 =$(".schoolImg61").attr('src'),
+            d1= $(".four-content-start1").val(),d2=$(".four-content-start1").val(),d3=$(".four-content1").val(),d4=$(".four-content-end1").val(),d5=$(".four-thanks1").val(),
+            e1=$(".five-title1").val(),e2=$(".school-map1").attr('src'),e3=$(".address1").val(),e4=$(".touch1").val(),e5=$(".email1").val(),e6=$(".phone1").val()
+            make.href="schoolCard.html?name="+ $(".one-title1").val()+"&a1="+a1+"&b1="+b1+"&b2="+b2+"&b3="+b3+"&b4="+b4+
+            "&c1="+c1+"&c2="+c2+"&c3="+c3+"&c4="+c4+"&d1="+d1+"&d2="+d2+"&d3="+d3+"&d4="+d4+"&e1="+e1+"&e2="+e2+"&e3="+e3+"&e4="+e4+"&e5="+e5
+    }
     //查看
     $(".show-btn").click(function(){
         $(".show-bg").show()
@@ -218,44 +181,6 @@
         $(this).next('img').attr('src',src);
         $(this).next('img').css('display',"block");
     })
-$("#start-make").click(function(){
-    //一页
-    $(".one-head").html($(".one-head1").val())
-    //二页
-    $(".two-title").html($(".two-title1").val())
-    $(".schoolImg1").attr('src',$(".schoolImg11").attr('src'))
-    $(".schoolImg2").attr('src',$(".schoolImg21").attr('src'))
-    $(".schoolImg3").attr('src',$(".schoolImg31").attr('src'))
-    //三页
-    $(".three-title").html($(".three-title1").val())
-    $(".schoolImg4").attr('src',$(".schoolImg41").attr('src'))
-    $(".schoolImg5").attr('src',$(".schoolImg51").attr('src'))
-    $(".schoolImg6").attr('src',$(".schoolImg61").attr('src'))
-    //四页
-    $(".four-title").html($(".four-title1").val())
-    $(".four-content-start").html($(".four-content-start1").val())
-    $(".four-content").html($(".four-content1").val())
-    $(".four-content-end").html($(".four-content-end1").val())
-    $(".four-thanks").html($(".four-thanks1").val())
-    //五页
-    $(".five-title").html($(".five-title1").val())
-    $(".email").html($(".content1").val())
-    $(".touch").html($(".touch1").val())
-    $(".address").html($(".address1").val())
-    $(".phone").html($(".phone1").val())
-    $(".school-map").attr('src',$(".school-map1").attr('src'))
-
-    $(".upload-box").hide()
-    setTimeout(function(){
-        $(".making").show(200,function(){
-            $(".making").hide(2000,function(){
-                $("#boxOne").slideDown(500)
-                document.body.style.overflow = 'hidden'
-            })
-        })
-    })
-})
-
 // 判断浏览器是否支持 createObjectURL api
 function getObjectURL(file) {  
 		 var url = null;   

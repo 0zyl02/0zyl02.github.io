@@ -16,6 +16,13 @@ function play(){
 $(".music-play").click(function(){
     play()
 })
+var url = window.location.href
+    var object = new Object, urls = document.location.search.substr(1).split("&");
+        for (i = 0; i < urls.length; i++) {
+        　　var url = urls[i].split("=");
+        　　object[url[0]] = decodeURIComponent(url[1])
+    }
+console.log(object)
 var boxOne = document.getElementById("boxOne")
 var boxTWo = document.getElementById("boxTWo")
 var boxThree = document.getElementById("boxThree")

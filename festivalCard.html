@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>劳动节</title>
+    <title>劳动快乐</title>
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="css/festival.css">
 </head>
@@ -17,7 +17,7 @@
     <a class="home" href="index.html"></a>
     <p class="arrow"></p>
     <div class="festival-box" id="boxOne">
-        <p class="one-title">
+        <p class="one-title" name="id">
             劳动最光荣
         </p>
         <p class="one-dec">
@@ -92,6 +92,49 @@
 <script src="js/touch-0.2.14.min.js"></script>
 <script src="js/all.js"></script>
 <script>
+    
+    var url = window.location.href
+    var object = new Object, urls = document.location.search.substr(1).split("&");
+        for (i = 0; i < urls.length; i++) {
+        　　var url = urls[i].split("=");
+        　　object[url[0]] = decodeURIComponent(url[1])
+    }
+    console.log(object)
+    //一页
+    $(".one-title").html(object.a1)
+    $(".one-intro").html(object.a2)
+    $(".one-intro1").html(object.a3)
+    //二页
+    $(".two-title").html(object.b1)
+    $(".two-intro").html(object.b2)
+    $(".content1").html(object.b3)
+    $(".content2").html(object.b4)
+    $(".content3").html(object.b5)
+    $(".content4").html(object.b6)
+    //三页
+    $(".three-title").html(object.c1)
+    $(".three-intro1-title").html(object.c2)
+    $(".three-intro1-content").html(object.c3)
+    $(".three-intro2-title").html(object.c4)
+    $(".three-intro2-content").html(object.c5)
+    //四页
+    $(".four-title").html(object.d1)
+    $(".goods-intro1").html(object.d2)
+    $(".goodsImg1").attr('src',object.d3)
+    $(".goods-intro2").html(object.d4)
+    $(".goodsImg2").attr('src',object.d5)
+    //五页
+    $(".five-title").html(object.e1)
+    $(".five-img1").attr('src',object.e2)
+    $(".five-img2").attr('src',object.e3)
+    $(".five-img3").attr('src',object.e4)
+    //六页
+    $(".six-title").html(object.f1)
+    $(".email").html(object.f2)
+    $(".touch").html(object.f3)
+    $(".address").html(object.f4)
+    $(".phone").html(object.f5)
+    $(".festival-map").attr('src',object.f6)
     touchSix()
 </script>
 </html>

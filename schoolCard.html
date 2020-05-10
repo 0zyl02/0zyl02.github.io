@@ -40,7 +40,7 @@
         <img id="schoolImg3" src="img/school/school2.png" alt="">
     </div>
     <div class="school-box" id="boxThree">
-        <p class="two-title">学校环境</p>
+        <p class="three-title">学校环境</p>
         <img id="schoolImg4" src="img/school/school4.jpg" alt="">
         <img id="schoolImg5" src="img/school/school5.jpg" alt="">
         <img id="schoolImg6" src="img/school/school6.jpg" alt="">
@@ -68,6 +68,31 @@
 <script src="js/touch-0.2.14.min.js"></script>
 <script src="js/all.js"></script>
 <script>
+    //一页
+    $(".one-head").html(object.a1)
+    //二页
+    $(".two-title").html(object.b1)
+    $(".schoolImg1").attr('src',object.b2)
+    $(".schoolImg2").attr('src',object.b3)
+    $(".schoolImg3").attr('src',object.b4)
+    //三页
+    $(".three-title").html(object.c1)
+    $(".schoolImg4").attr('src',object.c2)
+    $(".schoolImg5").attr('src',object.c3)
+    $(".schoolImg6").attr('src',object.c4)
+    //四页
+    $(".four-title").html(object.d1)
+    $(".four-content-start").html(object.d2)
+    $(".four-content").html(object.d3)
+    $(".four-content-end").html(object.d4)
+    $(".four-thanks").html(object.d5)
+    //五页
+    $(".five-title").html(object.e1)
+    $(".school-map").attr('src',object.e2)
+    $(".address").html(object.e3)
+    $(".touch").html(object.e4)
+    $(".email").html(object.e5)
+    $(".phone").html(object.e6)
     touchFive()
 </script>
 </html>

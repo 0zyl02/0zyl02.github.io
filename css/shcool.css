@@ -111,7 +111,7 @@ body{
         transform: scale(1.5) rotate(30deg);
     }
 }
-.two-title{
+.two-title,.three-title{
     font-size: .3rem;
     text-align: center;
     margin: .3rem 0 .2rem;
@@ -191,9 +191,9 @@ body{
     font-size: .2rem;
     margin: 0 .12rem;
     line-height: .35rem;
-    animation: show 1.5s linear;
+    animation: showT 1.5s linear;
 }
-@keyframes show{
+@keyframes showT{
     from{
         opacity: 0;
         transform: scale(0.5);
@@ -214,7 +214,7 @@ body{
     font-size: .4rem;
     color: orangered;
     text-align: center;
-    animation: show 3s linear  infinite;
+    animation: showT 3s linear  infinite;
     margin-top: .2rem;
 }
 #boxFive p,#boxFive span{

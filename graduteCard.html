@@ -281,6 +281,40 @@
 <script src="js/touch-0.2.14.min.js"></script>
 <script src="js/all.js"></script>
 <script>
+    var url = window.location.href
+    var object = new Object, urls = document.location.search.substr(1).split("&");
+        for (i = 0; i < urls.length; i++) {
+        　　var url = urls[i].split("=");
+        　　object[url[0]] = decodeURIComponent(url[1])
+    }
+    console.log(object)
+    //一页
+    $(".one-title").html(object.a1)
+    $(".one-title1").html(object.a2)
+    $(".one-intro").html(object.a3)
+    $(".one-intro1").html(object.a4)
+    //二页
+    $(".two-title").html(object.b1)
+    $(".two-intro").html(object.b2)
+    $(".two-content").html(object.b3)
+    //三页
+    $(".three-title").html(object.c1)
+    $(".three-intro").html(object.c2)
+    $(".three-img1").attr('src',object.c3)
+    $(".three-img2").attr('src',object.c4)
+    $(".three-img3").attr('src',object.c5)
+    //四页
+    $(".four-title").html(object.d1)
+    $(".four-intro").html(object.d2)
+    $(".four-img1").attr('src',object.d3)
+    $(".four-img2").attr('src',object.d4)
+    $(".four-img3").attr('src',object.d5)
+    //五页
+    $(".five-title").html(object.e1)
+    $(".five-content").html(object.e2)
+    $(".head").html(object.e3)
+    $(".time").html(object.e4)
+    $(".address").html(object.e5)
     touchFive()
 </script>
 </html>
