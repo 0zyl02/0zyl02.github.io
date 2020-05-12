@@ -87,6 +87,7 @@ body{
 }
 #boxOne img{
     width: 3rem;
+    height: 3rem;
     display: block;
     margin: 0 auto;
     border-radius: 20%;
@@ -99,6 +100,7 @@ body{
 }
 #boxTwo img{
     width: 2.5rem;
+    height: 2.5rem;
     position: absolute;
     top: 1rem;
     /* opacity: 0; */
