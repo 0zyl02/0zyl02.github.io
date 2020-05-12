@@ -367,16 +367,21 @@
         <span>活动地址：</span><input class="five-address1" type="text" value="XX市XX街XX酒店"><br>
         <span>活动时间：</span><input class="five-time1" type="text" value="2020年X月X日"><br>
         
-        <a id="start-make" onclick="getParams()">开始制作</a>
+        <a href="javascript:" id="start-make">开始制作</a>
     </div>
-
+    <div class="alert">
+        <p class="alert-question">是否确定使用这些内容制作?</p>
+        <p class="alert-answer"><a onclick="getParams()" id="alert-yes">确定</a><a id="alert-no">再看看</a></p>
+    </div>
 </body>
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/touch-0.2.14.min.js"></script>
 <script src="js/all.js"></script>
 <script>
     function getParams(){
-        var make = document.getElementById("start-make")
+        $(".show-bg").hide()
+        $(".alert").hide()
+        var make = document.getElementById("alert-yes")
         var a1 = $(".one-intro11").val(),a2=$(".one-intro21").val(),a3= $(".box-dec1").attr('src'),
             b1=$(".two-title1").val(),b2=$(".two-call1").val(),b3=$(".two-content1").val(),
             c1 =$(".three-title1").val(),c2 =$(".three-img1").attr('src'),c3 =$(".three-content-name1").val(),c4 =$(".three-content1").val(),

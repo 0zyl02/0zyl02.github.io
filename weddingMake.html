@@ -147,7 +147,11 @@
         <span>英文：</span><input class="wedding-invite-eng1" type="text" value="sincerely invite"><br>
         <span>活动内容：</span><input class="invite-content1" type="text" value="在最好的年华 相遇，在最美的时光里 相爱，沉浸在幸福中的我们将于2020年5月2日（星期几）几时举办婚礼，诚邀您和您的家人出席见证我们的幸福时刻，诚挚邀请您与我们一起分享神的祝福和爱的喜悦！"><br>
         <span>活动地点：</span><input class="invite-address1" type="text" value="地点：某市某街某某号某某酒店"><br>        
-        <a id="start-make" onclick="getParams()">开始制作</a>
+        <a href="javascript:" id="start-make">开始制作</a>
+    </div>
+    <div class="alert">
+        <p class="alert-question">是否确定使用这些内容制作?</p>
+        <p class="alert-answer"><a onclick="getParams()" id="alert-yes">确定</a><a id="alert-no">再看看</a></p>
     </div>
 </body>
 <script src="js/jquery-3.4.1.min.js"></script>
@@ -155,7 +159,9 @@
 <script src="js/all.js"></script>
 <script>
         function getParams(){
-        var make = document.getElementById("start-make")
+        $(".show-bg").hide()
+        $(".alert").hide()
+        var make = document.getElementById("alert-yes")
         var a1 = $(".wedding-title1").val(),a2 = $(".wedding-person1").val(),
             b1=$(".wedding-bride1").val(),b2=$(".bride-intro1").val(),b3=$(".bride-person1").attr('src'),
             c1 =$(".wedding-bridegroom1").val(),c2 =$(".bridegroom-intro1").val(),c3 =$(".bridegroom-person1").attr('src'),

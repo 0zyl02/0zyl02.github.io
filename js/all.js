@@ -143,3 +143,16 @@ function touchFive(){
         $("#boxFour").slideDown();
     })
 }
+$("#start-make").click(function(){
+    $(".show-bg").show()
+    $(".alert").show()
+})
+$("#alert-no").click(function(){
+    $(".show-bg").hide()
+    $(".alert").hide()
+    $(".alert1").hide()
+})
+$(".immediately-make").click(function(){
+    $(".show-bg").show()
+    $(".alert1").show()
+})

@@ -361,9 +361,12 @@
         <span>活动主题：</span><input class="head1" type="text" value="不说再见"><br>
         <span>活动时间：</span><input class="time1" type="text" value="X年X月X日"><br>
         <span>活动地点：</span><input class="address1" type="text" value="学校大礼堂"><br>
-        <a id="start-make" onclick="getParams()">开始制作</a>
+        <a href="javascript:" id="start-make">开始制作</a>
     </div>
-
+    <div class="alert">
+        <p class="alert-question">是否确定使用这些内容制作?</p>
+        <p class="alert-answer"><a onclick="getParams()" id="alert-yes">确定</a><a id="alert-no">再看看</a></p>
+    </div>
 
 </body>
 <script src="js/jquery-3.4.1.min.js"></script>
@@ -371,7 +374,9 @@
 <script src="js/all.js"></script>
 <script>
     function getParams(){
-        var make = document.getElementById("start-make")
+        $(".show-bg").hide()
+        $(".alert").hide()
+        var make = document.getElementById("alert-yes")
         var a1 = $(".one-title1").val(),a2=$(".one-title11").val(),a3= $(".one-intro1").val(),a4= $(".one-intro11").val(),  
             b1=$(".two-title1").val(),b2=$(".two-intro1").val(),b3=$(".two-content1").val(),
             c1 =$(".three-title1").val(),c2 =$(".three-intro1").val(),c3 =$(".three-img11").attr('src'),c4 =$(".three-img21").attr('src'),c5 =$(".three-img31").attr('src'),
