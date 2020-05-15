@@ -183,15 +183,34 @@
 
 // 判断浏览器是否支持 createObjectURL api
 function getObjectURL(file) {  
-		 var url = null;   
-		 if (window.createObjectURL!=undefined) {  
-		  url = window.createObjectURL(file) ;  
-		 } else if (window.URL!=undefined) { // mozilla(firefox)  
-		  url = window.URL.createObjectURL(file) ;  
-		 } else if (window.webkitURL!=undefined) { // webkit or chrome  
-		  url = window.webkitURL.createObjectURL(file) ;  
-		 }  
-		 return url ;  
+    var url = null;   
+    if (window.createObjectURL!=undefined) {  
+        url = window.createObjectURL(file) ;  
+    } else if (window.URL!=undefined) { // mozilla(firefox)  
+        url = window.URL.createObjectURL(file) ;  
+    } else if (window.webkitURL!=undefined) { // webkit or chrome  
+        url = window.webkitURL.createObjectURL(file) ;  
+    }  
+    return url ;  
 }
 
+var formData = new FormData();
+formData.append('photo', $('.upload-input')[0].files[0]);
+//ajax请求
+$.ajax({
+            type: "post",
+            url:  "https://0zyl02.github.io",
+            data: formdata,
+            dataType: 'json',
+            processData: false, // 告诉jQuery不要去处理发送的数据
+            contentType: false, // 告诉jQuery不要去设置Content-Type请求头
+            xhrFields:{withCredentials:true},
+            async: true,    //默认是true：异步，false：同步。
+            success: function (data) {
+                callback(data);
+            },
+            error: function (data) {
+                layer.msg('请求异常');
+            },
+        });
 </script>
