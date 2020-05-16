@@ -160,10 +160,10 @@
         $(".show-bg").hide()
         $(".alert").hide()
         var make = document.getElementById("alert-yes")
-        var a1 = decodeURIComponent($(".animate1").val()),a2=decodeURIComponent($(".birth-date1").val()),a3= $(".one-img1").attr('src'),b1=$(".two-title1").val(),b2=$(".birth-item11").attr('src'),
-            b3=$(".birth-item21").attr('src'),b4 = $(".birth-item31").attr('src'),c1 =decodeURIComponent($(".three-title1").val()),c2 = $(".three-img1").attr('src'),
-            d1= decodeURIComponent($(".invite-title1").val()),d2=decodeURIComponent($(".invite-call1").val()),d3=decodeURIComponent($(".invite-content1").val()),d4=decodeURIComponent($(".invite-name1").val()),e1=$(".five-address-img1").attr('src'),
-            e2=decodeURIComponent($(".birth-time1").val()),e3=decodeURIComponent($(".birth-address1").val())
+        var a1 = $(".animate1").val(),a2=$(".birth-date1").val(),a3= $(".one-img1").attr('src'),b1=$(".two-title1").val(),b2=$(".birth-item11").attr('src'),
+            b3=$(".birth-item21").attr('src'),b4 = $(".birth-item31").attr('src'),c1 =$(".three-title1").val(),c2 = $(".three-img1").attr('src'),
+            d1= $(".invite-title1").val(),d2=$(".invite-call1").val(),d3=$(".invite-content1").val(),d4=$(".invite-name1").val(),e1=$(".five-address-img1").attr('src'),
+            e2=$(".birth-time1").val(),e3=$(".birth-address1").val()
         make.href="birthCard.html?name="+ $(".animate1").val()+"&a1="+a1+"&a2="+a2+"&a3="+a3+"&b1="+b1+"&b2="+b2+"&b3="+b3+"&b4="+b4+"&c1="+c1+"&c2="+c2+"&d1="+d1+"&d2="+d2+"&d3="+d3+"&d4="+d4+"&e1="+e1+"&e2="+e2+"&e3="+e3;
     }
 
@@ -205,7 +205,7 @@ $('.upload-input').change(function(){
             formData.append('files', $(this)[0].files[0])
             //使用 ajax 上传图片
             $.ajax({
-                url: 'https://0zyl02.github.io/',
+                url: 'https://0zyl02.github.io/file_upload',
                 // url:'http://localhost:5500/file_upload',
                 type: 'POST',
                 cache: false,
