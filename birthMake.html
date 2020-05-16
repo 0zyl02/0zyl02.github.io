@@ -195,8 +195,8 @@ function getObjectURL(file) {
     }  
     return url ;  
 }
-$('.upload-input').change(function(){
-        var input = $('.upload-input')[0];
+$('#file').change(function(){
+        var input = $('#file')[0];
         //图片上传成功后会将图片名称赋值给 value 属性
         if(input.value){
             //使用 FormData 对象
@@ -220,10 +220,7 @@ $('.upload-input').change(function(){
            var pic = input.files[0];
            var read = new FileReader();
            read.onload = function (e) {
-            // let src = getObjectURL(this.files[0]);
-            // $(this).next('img').attr('src',src);
-            // $(this).next('img').css('display',"block");
-                $(this).next('img').attr('src',e.target.result);
+              document.getElementById('img').src = e.target.result;
            };
            read.readAsDataURL(pic);
         }
