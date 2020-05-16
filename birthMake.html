@@ -100,8 +100,10 @@
         </div>
         <span>标题：</span><input class="animate1" type="text" value="欢迎参加某某某生日" name="id"><br>
         <span>介绍：</span><input class="birth-date1" type="text" value="2020年某月某日"><br>
-        <span>图片：</span><input type="file" value="" class="upload-input">
-        <img src="img/birth/birImg1.jpg" alt="" class="one-img1"><br>
+        <!-- <span>图片：</span><input type="file" value="" class="upload-input">
+        <img src="img/birth/birImg1.jpg" alt="" class="one-img1"><br> -->
+        <span>图片：</span><input id="file" type="file" name="image" size="50" class="upload-input"/>
+        <img src="" alt="" id="img" class="one-img1"><br>
         <p>第二页</p>
         <div class="show-box">
             <p class="show-btn">查看</p>
@@ -169,8 +171,8 @@
         let src = getObjectURL(this.files[0]);
         $(this).next('img').attr('src',src);
         $(this).next('img').css('display',"block");
+        var formData = new FormData();  
     })
-    
     //查看
     $(".show-btn").click(function(){
         $(".show-bg").show()
@@ -193,24 +195,36 @@ function getObjectURL(file) {
     }  
     return url ;  
 }
+$('#file').change(function(){
+        var input = $('#file')[0];
+        //图片上传成功后会将图片名称赋值给 value 属性
+        if(input.value){
+            //使用 FormData 对象
+            var formData = new FormData();
+            //将图片对象添加到 files
+            formData.append('files', $('#file')[0].files[0])
+            //使用 ajax 上传图片
+            $.ajax({
+                url: 'https://0zyl02.github.io/file_upload',
+                type: 'POST',
+                cache: false,
+                data: formData,
+                processData: false,
+                contentType: false
+            }).done(function(res) {
+                console.log(res);
+            }).fail(function(res) {
+                console.log(res);
+            });
+            //以下是将图片显示到 img 标签上
+           var pic = input.files[0];
+           var read = new FileReader();
+           read.onload = function (e) {
+              document.getElementById('img').src = e.target.result;
+           };
+           read.readAsDataURL(pic);
+        }
+    })
 
-var formData = new FormData();
-formData.append('photo', $('.upload-input')[0].files[0]);
-//ajax请求
-$.ajax({
-            type: "post",
-            url:  "https://0zyl02.github.io",
-            data: formdata,
-            dataType: 'json',
-            processData: false, // 告诉jQuery不要去处理发送的数据
-            contentType: false, // 告诉jQuery不要去设置Content-Type请求头
-            xhrFields:{withCredentials:true},
-            async: true,    //默认是true：异步，false：同步。
-            success: function (data) {
-                callback(data);
-            },
-            error: function (data) {
-                layer.msg('请求异常');
-            },
-        });
 </script>
+<script src="js/node.js"></script>

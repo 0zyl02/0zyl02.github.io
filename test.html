@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>文件上传表单</title>
+</head>
+<body>
+<h3>文件上传：</h3>
+选择一个文件上传: <br />
+<input id="file" type="file" name="image" size="50" />
+<img src="" alt="" id="img">
+</body>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/node.js"></script>
+<script>
+    $('#file').change(function(){
+        var input = $('#file')[0];
+        //图片上传成功后会将图片名称赋值给 value 属性
+        if(input.value){
+            //使用 FormData 对象
+            var formData = new FormData();
+            //将图片对象添加到 files
+            formData.append('files', $('#file')[0].files[0])
+            //使用 ajax 上传图片
+            $.ajax({
+                url: 'http://localhost:5500/file_upload',
+                type: 'POST',
+                cache: false,
+                data: formData,
+                processData: false,
+                contentType: false
+            }).done(function(res) {
+                console.log(res);
+            }).fail(function(res) {
+                console.log(res);
+            });
+            //以下是将图片显示到 img 标签上
+           var pic = input.files[0];
+           var read = new FileReader();
+           read.onload = function (e) {
+              document.getElementById('img').src = e.target.result;
+           };
+           read.readAsDataURL(pic);
+        }
+    })
+</script>
+</html>
