@@ -129,7 +129,7 @@
     height: .4rem;
     line-height: .4rem;
 }
-@media screen and (max-width: 320px) {
+/* @media screen and (max-width: 320px) {
 	* {
 		font-size: 84px;
 	}
@@ -233,4 +233,46 @@
 	html {
 		font-size: 220px;
 	}
+} */
+@media (max-width:768px) {
+    * {
+		font-size: 110px;
+	}
+}
+@media only screen and (device-width:375px) and (device-height:812px) and (-webkit-device-pixel-ratio:3) {
+    * {
+		font-size: 120px;
+	}
+}
+/*iphone 6/7/8 适配*/
+@media only screen and (device-width:375px) and (device-height:667px)   {
+    * {
+		font-size: 100px;
+	}
+}
+/*iPhone 5/SE适配*/
+@media only screen and (device-width:320px) and (device-height:568px)   {
+    * {
+		font-size: 85px;
+	}
+}
+@media screen and (height: 1024px) and (width: 768px){
+    *{
+        font-size: 155px;
+    }
+}
+@media screen and (width: 1024px){
+    * {
+        font-size: 200px;
+    }
+}
+@media only screen and (max-width: 768px) and (min-width: 415px){
+    * {
+        font-size: 150px;
+    }
+}
+@media only screen and (max-width: 413px) and (min-width: 376px){
+    * {
+        font-size: 121px;
+    }
 }

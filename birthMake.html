@@ -167,12 +167,12 @@
         make.href="birthCard.html?name="+ $(".animate1").val()+"&a1="+a1+"&a2="+a2+"&a3="+a3+"&b1="+b1+"&b2="+b2+"&b3="+b3+"&b4="+b4+"&c1="+c1+"&c2="+c2+"&d1="+d1+"&d2="+d2+"&d3="+d3+"&d4="+d4+"&e1="+e1+"&e2="+e2+"&e3="+e3;
     }
 
-    // $(".upload-input").change(function(){
-    //     let src = getObjectURL(this.files[0]);
-    //     $(this).next('img').attr('src',src);
-    //     $(this).next('img').css('display',"block");
-    //     var formData = new FormData();  
-    // })
+    $(".upload-input").change(function(){
+        let src = getObjectURL(this.files[0]);
+        $(this).next('img').attr('src',src);
+        $(this).next('img').css('display',"block");
+        var formData = new FormData();  
+    })
     //查看
     $(".show-btn").click(function(){
         $(".show-bg").show()
@@ -195,42 +195,6 @@ function getObjectURL(file) {
     }  
     return url ;  
 }
-$('.upload-input').change(function(){
-        var input = $(this)[0];
-        //图片上传成功后会将图片名称赋值给 value 属性
-        if(input.value){
-            //使用 FormData 对象
-            var formData = new FormData();
-            //将图片对象添加到 files
-            formData.append('files', $(this)[0].files[0])
-            //使用 ajax 上传图片
-            $.ajax({
-                url: 'https://0zyl02.github.io/file_upload',
-                // url:'http://localhost:5500/file_upload',
-                type: 'POST',
-                cache: false,
-                data: formData,
-                processData: false,
-                contentType: false
-            }).done(function(res) {
-                // console.log(res);
-            }).fail(function(res) {
-                // console.log(res);
-            });
-            //以下是将图片显示到 img 标签上
-            var that = $(this)
-            // console.log(that.next('img'))
-            var pic = input.files[0];
-            var read = new FileReader();
-            read.onload = function (e) {
-                // console.log(e.target.resulte)
-                // document.getElementById('img').src = e.target.result;
-                that.next('img').attr('src',e.target.result);
-                // console.log(e.target.resulte)
-           };
-           read.readAsDataURL(pic);
-        }
-    })
 
 </script>
-<script src="js/node.js"></script>
+<!-- <script src="js/node.js"></script> -->
